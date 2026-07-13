@@ -1,0 +1,1573 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SMYFS 100 Plan//Training Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:SMYFS 100 Training
+X-WR-CALDESC:15-week training plan for the Show Me Your Free State 100 Mi
+ le Ultramarathon (Wathena KS, Oct 24 2026)
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:smyfs100-w1-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260712
+DTEND;VALUE=DATE:20260713
+SUMMARY:🏃 W1: 12mi easy (Z2\, run/walk if any shin niggle)
+DESCRIPTION:Week 1 (Jul 12 – Jul 18) — 32mi total, long: 12mi easy\n\nTod
+ ay: 12mi easy (Z2\, run/walk if any shin niggle)\n\nWeek focus: Reintro 
+ at current volume. Confirm the knee/shin are settling before any ramp. K
+ eep the rehab you're already doing.\n\nNote: You're at ~28mi/wk right no
+ w while managing the knee. Week 1 barely nudges that. The rule this week
+ : if the shin or knee talks back the next morning\, repeat this week bef
+ ore moving on.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W1: 12mi easy (Z2\, run/walk if any shin niggle)
+  — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w1-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260713
+DTEND;VALUE=DATE:20260714
+SUMMARY:🏋️ W1: Rehab: knee-hold isometrics + ankle band + calf stretch
+DESCRIPTION:Week 1 (Jul 12 – Jul 18) — 32mi total, long: 12mi easy\n\nTod
+ ay: Rehab: knee-hold isometrics + ankle band + calf stretch\n\nWeek focu
+ s: Reintro at current volume. Confirm the knee/shin are settling before 
+ any ramp. Keep the rehab you're already doing.\n\nNote: You're at ~28mi/
+ wk right now while managing the knee. Week 1 barely nudges that. The rul
+ e this week: if the shin or knee talks back the next morning\, repeat th
+ is week before moving on.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w1-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:🟢 W1: 5mi easy — stop if sharp knee pain
+DESCRIPTION:Week 1 (Jul 12 – Jul 18) — 32mi total, long: 12mi easy\n\nTod
+ ay: 5mi easy — stop if sharp knee pain\n\nWeek focus: Reintro at current
+  volume. Confirm the knee/shin are settling before any ramp. Keep the re
+ hab you're already doing.\n\nNote: You're at ~28mi/wk right now while ma
+ naging the knee. Week 1 barely nudges that. The rule this week: if the s
+ hin or knee talks back the next morning\, repeat this week before moving
+  on.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w1-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
+SUMMARY:🏋️ W1: Gym upper + backward treadmill walk 5 min
+DESCRIPTION:Week 1 (Jul 12 – Jul 18) — 32mi total, long: 12mi easy\n\nTod
+ ay: Gym upper + backward treadmill walk 5 min\n\nWeek focus: Reintro at 
+ current volume. Confirm the knee/shin are settling before any ramp. Keep
+  the rehab you're already doing.\n\nNote: You're at ~28mi/wk right now w
+ hile managing the knee. Week 1 barely nudges that. The rule this week: i
+ f the shin or knee talks back the next morning\, repeat this week before
+  moving on.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w1-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260716
+DTEND;VALUE=DATE:20260717
+SUMMARY:🏃 W1: 6mi easy on soft surface if possible
+DESCRIPTION:Week 1 (Jul 12 – Jul 18) — 32mi total, long: 12mi easy\n\nTod
+ ay: 6mi easy on soft surface if possible\n\nWeek focus: Reintro at curre
+ nt volume. Confirm the knee/shin are settling before any ramp. Keep the 
+ rehab you're already doing.\n\nNote: You're at ~28mi/wk right now while 
+ managing the knee. Week 1 barely nudges that. The rule this week: if the
+  shin or knee talks back the next morning\, repeat this week before movi
+ ng on.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w1-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260717
+DTEND;VALUE=DATE:20260718
+SUMMARY:🏋️ W1: Gym + hip abduction/adduction
+DESCRIPTION:Week 1 (Jul 12 – Jul 18) — 32mi total, long: 12mi easy\n\nTod
+ ay: Gym + hip abduction/adduction\n\nWeek focus: Reintro at current volu
+ me. Confirm the knee/shin are settling before any ramp. Keep the rehab y
+ ou're already doing.\n\nNote: You're at ~28mi/wk right now while managin
+ g the knee. Week 1 barely nudges that. The rule this week: if the shin o
+ r knee talks back the next morning\, repeat this week before moving on.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w1-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260718
+DTEND;VALUE=DATE:20260719
+SUMMARY:😴 W1: Walk + full mobility session
+DESCRIPTION:Week 1 (Jul 12 – Jul 18) — 32mi total, long: 12mi easy\n\nTod
+ ay: Walk + full mobility session\n\nWeek focus: Reintro at current volum
+ e. Confirm the knee/shin are settling before any ramp. Keep the rehab yo
+ u're already doing.\n\nNote: You're at ~28mi/wk right now while managing
+  the knee. Week 1 barely nudges that. The rule this week: if the shin or
+  knee talks back the next morning\, repeat this week before moving on.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w2-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260719
+DTEND;VALUE=DATE:20260720
+SUMMARY:🏃 W2: 15mi easy — keep your 'slow even when I feel good' discip.
+ ..
+DESCRIPTION:Week 2 (Jul 19 – Jul 25) — 38mi total, long: 15mi easy\n\nTod
+ ay: 15mi easy — keep your 'slow even when I feel good' discipline\n\nWee
+ k focus: Small step up. Long run stays gentle. Rehab stays daily. Prove 
+ the tissue can take slightly more.\n\nNote: Your June 28 long run (13.6m
+ i at ~14:00/mi\, deliberately slowed) is exactly the effort to hold here
+ . Patience now is what makes the peak weeks possible.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W2: 15mi easy — keep your 'slow even when I feel
+  good' discip... — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w2-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260720
+DTEND;VALUE=DATE:20260721
+SUMMARY:🏋️ W2: Rehab block + single-leg calf press
+DESCRIPTION:Week 2 (Jul 19 – Jul 25) — 38mi total, long: 15mi easy\n\nTod
+ ay: Rehab block + single-leg calf press\n\nWeek focus: Small step up. Lo
+ ng run stays gentle. Rehab stays daily. Prove the tissue can take slight
+ ly more.\n\nNote: Your June 28 long run (13.6mi at ~14:00/mi\, deliberat
+ ely slowed) is exactly the effort to hold here. Patience now is what mak
+ es the peak weeks possible.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w2-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260721
+DTEND;VALUE=DATE:20260722
+SUMMARY:🟢 W2: 6mi easy
+DESCRIPTION:Week 2 (Jul 19 – Jul 25) — 38mi total, long: 15mi easy\n\nTod
+ ay: 6mi easy\n\nWeek focus: Small step up. Long run stays gentle. Rehab 
+ stays daily. Prove the tissue can take slightly more.\n\nNote: Your June
+  28 long run (13.6mi at ~14:00/mi\, deliberately slowed) is exactly the 
+ effort to hold here. Patience now is what makes the peak weeks possible.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w2-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260722
+DTEND;VALUE=DATE:20260723
+SUMMARY:🏋️ W2: Gym upper + backward walk
+DESCRIPTION:Week 2 (Jul 19 – Jul 25) — 38mi total, long: 15mi easy\n\nTod
+ ay: Gym upper + backward walk\n\nWeek focus: Small step up. Long run sta
+ ys gentle. Rehab stays daily. Prove the tissue can take slightly more.\n
+ \nNote: Your June 28 long run (13.6mi at ~14:00/mi\, deliberately slowed
+ ) is exactly the effort to hold here. Patience now is what makes the pea
+ k weeks possible.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w2-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+SUMMARY:🏃 W2: 7mi easy
+DESCRIPTION:Week 2 (Jul 19 – Jul 25) — 38mi total, long: 15mi easy\n\nTod
+ ay: 7mi easy\n\nWeek focus: Small step up. Long run stays gentle. Rehab 
+ stays daily. Prove the tissue can take slightly more.\n\nNote: Your June
+  28 long run (13.6mi at ~14:00/mi\, deliberately slowed) is exactly the 
+ effort to hold here. Patience now is what makes the peak weeks possible.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w2-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20260725
+SUMMARY:🏋️ W2: Gym legs (light) + ankle band mobility
+DESCRIPTION:Week 2 (Jul 19 – Jul 25) — 38mi total, long: 15mi easy\n\nTod
+ ay: Gym legs (light) + ankle band mobility\n\nWeek focus: Small step up.
+  Long run stays gentle. Rehab stays daily. Prove the tissue can take sli
+ ghtly more.\n\nNote: Your June 28 long run (13.6mi at ~14:00/mi\, delibe
+ rately slowed) is exactly the effort to hold here. Patience now is what 
+ makes the peak weeks possible.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w2-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260725
+DTEND;VALUE=DATE:20260726
+SUMMARY:🟢 W2: 4mi recovery run
+DESCRIPTION:Week 2 (Jul 19 – Jul 25) — 38mi total, long: 15mi easy\n\nTod
+ ay: 4mi recovery run\n\nWeek focus: Small step up. Long run stays gentle
+ . Rehab stays daily. Prove the tissue can take slightly more.\n\nNote: Y
+ our June 28 long run (13.6mi at ~14:00/mi\, deliberately slowed) is exac
+ tly the effort to hold here. Patience now is what makes the peak weeks p
+ ossible.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w3-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260801
+DTEND;VALUE=DATE:20260802
+SUMMARY:🏃 W3: 16mi easy — practice race nutrition every 45 min
+DESCRIPTION:Week 3 (Jul 26 – Aug 1) — 44mi total, long: 16mi\n\nToday: 16
+ mi easy — practice race nutrition every 45 min\n\nWeek focus: Build begi
+ ns — but only if week 2 felt clean. Introduce very gentle tempo. Keep re
+ hab 3x/week minimum.\n\nNote: Tempo is your identified gap\, but with a 
+ cranky knee we keep it SHORT and on flat\, soft ground. 3x8 min comforta
+ bly hard is plenty. Downhill running is the shin/knee aggravator — avoid
+  steep descents on tempo days.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W3: 16mi easy — practice race nutrition every 45
+  min — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w3-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260726
+DTEND;VALUE=DATE:20260727
+SUMMARY:🟢 W3: 5mi easy shakeout
+DESCRIPTION:Week 3 (Jul 26 – Aug 1) — 44mi total, long: 16mi\n\nToday: 5m
+ i easy shakeout\n\nWeek focus: Build begins — but only if week 2 felt cl
+ ean. Introduce very gentle tempo. Keep rehab 3x/week minimum.\n\nNote: T
+ empo is your identified gap\, but with a cranky knee we keep it SHORT an
+ d on flat\, soft ground. 3x8 min comfortably hard is plenty. Downhill ru
+ nning is the shin/knee aggravator — avoid steep descents on tempo days.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w3-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+SUMMARY:🏋️ W3: Rehab + legs (keep isometric knee holds)
+DESCRIPTION:Week 3 (Jul 26 – Aug 1) — 44mi total, long: 16mi\n\nToday: Re
+ hab + legs (keep isometric knee holds)\n\nWeek focus: Build begins — but
+  only if week 2 felt clean. Introduce very gentle tempo. Keep rehab 3x/w
+ eek minimum.\n\nNote: Tempo is your identified gap\, but with a cranky k
+ nee we keep it SHORT and on flat\, soft ground. 3x8 min comfortably hard
+  is plenty. Downhill running is the shin/knee aggravator — avoid steep d
+ escents on tempo days.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w3-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+SUMMARY:🏃 W3: 8mi with 3x8 min gentle tempo (back off if knee flares)
+DESCRIPTION:Week 3 (Jul 26 – Aug 1) — 44mi total, long: 16mi\n\nToday: 8m
+ i with 3x8 min gentle tempo (back off if knee flares)\n\nWeek focus: Bui
+ ld begins — but only if week 2 felt clean. Introduce very gentle tempo. 
+ Keep rehab 3x/week minimum.\n\nNote: Tempo is your identified gap\, but 
+ with a cranky knee we keep it SHORT and on flat\, soft ground. 3x8 min c
+ omfortably hard is plenty. Downhill running is the shin/knee aggravator 
+ — avoid steep descents on tempo days.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w3-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:🏋️ W3: Gym upper + backward walk
+DESCRIPTION:Week 3 (Jul 26 – Aug 1) — 44mi total, long: 16mi\n\nToday: Gy
+ m upper + backward walk\n\nWeek focus: Build begins — but only if week 2
+  felt clean. Introduce very gentle tempo. Keep rehab 3x/week minimum.\n\
+ nNote: Tempo is your identified gap\, but with a cranky knee we keep it 
+ SHORT and on flat\, soft ground. 3x8 min comfortably hard is plenty. Dow
+ nhill running is the shin/knee aggravator — avoid steep descents on temp
+ o days.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w3-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+SUMMARY:🟢 W3: 6mi easy
+DESCRIPTION:Week 3 (Jul 26 – Aug 1) — 44mi total, long: 16mi\n\nToday: 6m
+ i easy\n\nWeek focus: Build begins — but only if week 2 felt clean. Intr
+ oduce very gentle tempo. Keep rehab 3x/week minimum.\n\nNote: Tempo is y
+ our identified gap\, but with a cranky knee we keep it SHORT and on flat
+ \, soft ground. 3x8 min comfortably hard is plenty. Downhill running is 
+ the shin/knee aggravator — avoid steep descents on tempo days.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w3-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:🏋️ W3: Gym + mobility
+DESCRIPTION:Week 3 (Jul 26 – Aug 1) — 44mi total, long: 16mi\n\nToday: Gy
+ m + mobility\n\nWeek focus: Build begins — but only if week 2 felt clean
+ . Introduce very gentle tempo. Keep rehab 3x/week minimum.\n\nNote: Temp
+ o is your identified gap\, but with a cranky knee we keep it SHORT and o
+ n flat\, soft ground. 3x8 min comfortably hard is plenty. Downhill runni
+ ng is the shin/knee aggravator — avoid steep descents on tempo days.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w4-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260808
+DTEND;VALUE=DATE:20260809
+SUMMARY:🏃 W4: 18mi — dial in gels/real food\, aim 200–250 cal/hr
+DESCRIPTION:Week 4 (Aug 2 – Aug 8) — 48mi total, long: 18mi\n\nToday: 18m
+ i — dial in gels/real food\, aim 200–250 cal/hr\n\nWeek focus: Push mile
+ age. First 18-miler of the block. Nutrition rehearsal mandatory.\n\nNote
+ : Check morning resting HR this week — your baseline is ~60 bpm. Three s
+ traight days at 64+ means back off regardless of how the legs feel.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W4: 18mi — dial in gels/real food\, aim 200–250 
+ cal/hr — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w4-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260802
+DTEND;VALUE=DATE:20260803
+SUMMARY:🟢 W4: 5mi easy B2B taste
+DESCRIPTION:Week 4 (Aug 2 – Aug 8) — 48mi total, long: 18mi\n\nToday: 5mi
+  easy B2B taste\n\nWeek focus: Push mileage. First 18-miler of the block
+ . Nutrition rehearsal mandatory.\n\nNote: Check morning resting HR this 
+ week — your baseline is ~60 bpm. Three straight days at 64+ means back o
+ ff regardless of how the legs feel.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w4-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+SUMMARY:🏋️ W4: Rehab + legs
+DESCRIPTION:Week 4 (Aug 2 – Aug 8) — 48mi total, long: 18mi\n\nToday: Reh
+ ab + legs\n\nWeek focus: Push mileage. First 18-miler of the block. Nutr
+ ition rehearsal mandatory.\n\nNote: Check morning resting HR this week —
+  your baseline is ~60 bpm. Three straight days at 64+ means back off reg
+ ardless of how the legs feel.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w4-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260804
+DTEND;VALUE=DATE:20260805
+SUMMARY:🏃 W4: 9mi with 3x10 min tempo
+DESCRIPTION:Week 4 (Aug 2 – Aug 8) — 48mi total, long: 18mi\n\nToday: 9mi
+  with 3x10 min tempo\n\nWeek focus: Push mileage. First 18-miler of the 
+ block. Nutrition rehearsal mandatory.\n\nNote: Check morning resting HR 
+ this week — your baseline is ~60 bpm. Three straight days at 64+ means b
+ ack off regardless of how the legs feel.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w4-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+SUMMARY:🏋️ W4: Gym upper
+DESCRIPTION:Week 4 (Aug 2 – Aug 8) — 48mi total, long: 18mi\n\nToday: Gym
+  upper\n\nWeek focus: Push mileage. First 18-miler of the block. Nutriti
+ on rehearsal mandatory.\n\nNote: Check morning resting HR this week — yo
+ ur baseline is ~60 bpm. Three straight days at 64+ means back off regard
+ less of how the legs feel.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w4-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+SUMMARY:🟢 W4: 6mi easy
+DESCRIPTION:Week 4 (Aug 2 – Aug 8) — 48mi total, long: 18mi\n\nToday: 6mi
+  easy\n\nWeek focus: Push mileage. First 18-miler of the block. Nutritio
+ n rehearsal mandatory.\n\nNote: Check morning resting HR this week — you
+ r baseline is ~60 bpm. Three straight days at 64+ means back off regardl
+ ess of how the legs feel.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w4-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260808
+SUMMARY:🏋️ W4: Gym + 2mi shakeout
+DESCRIPTION:Week 4 (Aug 2 – Aug 8) — 48mi total, long: 18mi\n\nToday: Gym
+  + 2mi shakeout\n\nWeek focus: Push mileage. First 18-miler of the block
+ . Nutrition rehearsal mandatory.\n\nNote: Check morning resting HR this 
+ week — your baseline is ~60 bpm. Three straight days at 64+ means back o
+ ff regardless of how the legs feel.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w5-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:🏃 W5: 14mi easy Z2
+DESCRIPTION:Week 5 (Aug 9 – Aug 15) — 38mi total, long: 14mi\n\nToday: 14
+ mi easy Z2\n\nWeek focus: ⬇ First real cutback. Down ~20%. This is where
+  the knee/shin bank recovery. Do NOT skip it.\n\nNote: Your COROS load s
+ pikes high (you hit 236 TL on June 28 alone). Cutback weeks are the coun
+ terweight. Check Oura HRV — if it's up vs the last few weeks\, you're ab
+ sorbing the load well.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W5: 14mi easy Z2 — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w5-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260809
+DTEND;VALUE=DATE:20260810
+SUMMARY:😴 W5: Walk + hydro bed
+DESCRIPTION:Week 5 (Aug 9 – Aug 15) — 38mi total, long: 14mi\n\nToday: Wa
+ lk + hydro bed\n\nWeek focus: ⬇ First real cutback. Down ~20%. This is w
+ here the knee/shin bank recovery. Do NOT skip it.\n\nNote: Your COROS lo
+ ad spikes high (you hit 236 TL on June 28 alone). Cutback weeks are the 
+ counterweight. Check Oura HRV — if it's up vs the last few weeks\, you'r
+ e absorbing the load well.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w5-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260810
+DTEND;VALUE=DATE:20260811
+SUMMARY:🏋️ W5: Rehab + legs (full routine returns)
+DESCRIPTION:Week 5 (Aug 9 – Aug 15) — 38mi total, long: 14mi\n\nToday: Re
+ hab + legs (full routine returns)\n\nWeek focus: ⬇ First real cutback. D
+ own ~20%. This is where the knee/shin bank recovery. Do NOT skip it.\n\n
+ Note: Your COROS load spikes high (you hit 236 TL on June 28 alone). Cut
+ back weeks are the counterweight. Check Oura HRV — if it's up vs the las
+ t few weeks\, you're absorbing the load well.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w5-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260811
+DTEND;VALUE=DATE:20260812
+SUMMARY:🟢 W5: 6mi easy
+DESCRIPTION:Week 5 (Aug 9 – Aug 15) — 38mi total, long: 14mi\n\nToday: 6m
+ i easy\n\nWeek focus: ⬇ First real cutback. Down ~20%. This is where the
+  knee/shin bank recovery. Do NOT skip it.\n\nNote: Your COROS load spike
+ s high (you hit 236 TL on June 28 alone). Cutback weeks are the counterw
+ eight. Check Oura HRV — if it's up vs the last few weeks\, you're absorb
+ ing the load well.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w5-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260812
+DTEND;VALUE=DATE:20260813
+SUMMARY:🏋️ W5: Gym upper
+DESCRIPTION:Week 5 (Aug 9 – Aug 15) — 38mi total, long: 14mi\n\nToday: Gy
+ m upper\n\nWeek focus: ⬇ First real cutback. Down ~20%. This is where th
+ e knee/shin bank recovery. Do NOT skip it.\n\nNote: Your COROS load spik
+ es high (you hit 236 TL on June 28 alone). Cutback weeks are the counter
+ weight. Check Oura HRV — if it's up vs the last few weeks\, you're absor
+ bing the load well.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w5-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+SUMMARY:🏃 W5: 7mi easy
+DESCRIPTION:Week 5 (Aug 9 – Aug 15) — 38mi total, long: 14mi\n\nToday: 7m
+ i easy\n\nWeek focus: ⬇ First real cutback. Down ~20%. This is where the
+  knee/shin bank recovery. Do NOT skip it.\n\nNote: Your COROS load spike
+ s high (you hit 236 TL on June 28 alone). Cutback weeks are the counterw
+ eight. Check Oura HRV — if it's up vs the last few weeks\, you're absorb
+ ing the load well.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w5-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:🏋️ W5: Gym + stretch
+DESCRIPTION:Week 5 (Aug 9 – Aug 15) — 38mi total, long: 14mi\n\nToday: Gy
+ m + stretch\n\nWeek focus: ⬇ First real cutback. Down ~20%. This is wher
+ e the knee/shin bank recovery. Do NOT skip it.\n\nNote: Your COROS load 
+ spikes high (you hit 236 TL on June 28 alone). Cutback weeks are the cou
+ nterweight. Check Oura HRV — if it's up vs the last few weeks\, you're a
+ bsorbing the load well.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w6-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:🏃 W6: 20mi at goal race effort (~14:00/mi)
+DESCRIPTION:Week 6 (Aug 16 – Aug 22) — 52mi total, long: B2B: 20+12\n\nTo
+ day: 20mi at goal race effort (~14:00/mi)\n\nWeek focus: First back-to-b
+ ack weekend. This teaches your legs to run tired — the core skill for 10
+ 0mi.\n\nNote: 32mi across the weekend. Watch the shin closely on Sunday'
+ s tired-legs run — that's when form breaks down and shin stress builds. 
+ Shorten Sunday if needed\; don't force it.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W6: 20mi at goal race effort (~14:00/mi) — prep 
+ gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w6-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+SUMMARY:🔁 W6: 12mi easy on tired legs — the point is fatigue
+DESCRIPTION:Week 6 (Aug 16 – Aug 22) — 52mi total, long: B2B: 20+12\n\nTo
+ day: 12mi easy on tired legs — the point is fatigue\n\nWeek focus: First
+  back-to-back weekend. This teaches your legs to run tired — the core sk
+ ill for 100mi.\n\nNote: 32mi across the weekend. Watch the shin closely 
+ on Sunday's tired-legs run — that's when form breaks down and shin stres
+ s builds. Shorten Sunday if needed\; don't force it.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🔁 W6: 12mi easy on tired legs — the point is fatig
+ ue — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w6-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260817
+DTEND;VALUE=DATE:20260818
+SUMMARY:🏋️ W6: Rehab + mobility only (legs are cooked)
+DESCRIPTION:Week 6 (Aug 16 – Aug 22) — 52mi total, long: B2B: 20+12\n\nTo
+ day: Rehab + mobility only (legs are cooked)\n\nWeek focus: First back-t
+ o-back weekend. This teaches your legs to run tired — the core skill for
+  100mi.\n\nNote: 32mi across the weekend. Watch the shin closely on Sund
+ ay's tired-legs run — that's when form breaks down and shin stress build
+ s. Shorten Sunday if needed\; don't force it.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w6-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260818
+DTEND;VALUE=DATE:20260819
+SUMMARY:🟢 W6: 5mi very easy
+DESCRIPTION:Week 6 (Aug 16 – Aug 22) — 52mi total, long: B2B: 20+12\n\nTo
+ day: 5mi very easy\n\nWeek focus: First back-to-back weekend. This teach
+ es your legs to run tired — the core skill for 100mi.\n\nNote: 32mi acro
+ ss the weekend. Watch the shin closely on Sunday's tired-legs run — that
+ 's when form breaks down and shin stress builds. Shorten Sunday if neede
+ d\; don't force it.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w6-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260820
+SUMMARY:🏋️ W6: Gym upper
+DESCRIPTION:Week 6 (Aug 16 – Aug 22) — 52mi total, long: B2B: 20+12\n\nTo
+ day: Gym upper\n\nWeek focus: First back-to-back weekend. This teaches y
+ our legs to run tired — the core skill for 100mi.\n\nNote: 32mi across t
+ he weekend. Watch the shin closely on Sunday's tired-legs run — that's w
+ hen form breaks down and shin stress builds. Shorten Sunday if needed\; 
+ don't force it.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w6-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260821
+SUMMARY:🏃 W6: 8mi easy
+DESCRIPTION:Week 6 (Aug 16 – Aug 22) — 52mi total, long: B2B: 20+12\n\nTo
+ day: 8mi easy\n\nWeek focus: First back-to-back weekend. This teaches yo
+ ur legs to run tired — the core skill for 100mi.\n\nNote: 32mi across th
+ e weekend. Watch the shin closely on Sunday's tired-legs run — that's wh
+ en form breaks down and shin stress builds. Shorten Sunday if needed\; d
+ on't force it.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w6-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260821
+DTEND;VALUE=DATE:20260822
+SUMMARY:😴 W6: Rest or walk
+DESCRIPTION:Week 6 (Aug 16 – Aug 22) — 52mi total, long: B2B: 20+12\n\nTo
+ day: Rest or walk\n\nWeek focus: First back-to-back weekend. This teache
+ s your legs to run tired — the core skill for 100mi.\n\nNote: 32mi acros
+ s the weekend. Watch the shin closely on Sunday's tired-legs run — that'
+ s when form breaks down and shin stress builds. Shorten Sunday if needed
+ \; don't force it.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w7-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260830
+SUMMARY:🏃 W7: 22mi steady race effort
+DESCRIPTION:Week 7 (Aug 23 – Aug 29) — 56mi total, long: B2B: 22+16\n\nTo
+ day: 22mi steady race effort\n\nWeek focus: Peak phase opens. Bigger B2B
+ . Fuel and gear dialed. Gym reduces volume\, keeps frequency.\n\nNote: 3
+ 8mi weekend. If SMYFS runs another training event in this window\, swap 
+ it in as your Saturday long run — course-specific miles beat anything el
+ se.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W7: 22mi steady race effort — prep gear & nutrit
+ ion tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w7-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:🔁 W7: 16mi tired — eat and drink the whole way
+DESCRIPTION:Week 7 (Aug 23 – Aug 29) — 56mi total, long: B2B: 22+16\n\nTo
+ day: 16mi tired — eat and drink the whole way\n\nWeek focus: Peak phase 
+ opens. Bigger B2B. Fuel and gear dialed. Gym reduces volume\, keeps freq
+ uency.\n\nNote: 38mi weekend. If SMYFS runs another training event in th
+ is window\, swap it in as your Saturday long run — course-specific miles
+  beat anything else.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🔁 W7: 16mi tired — eat and drink the whole way — p
+ rep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w7-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:🏋️ W7: Rehab + mobility
+DESCRIPTION:Week 7 (Aug 23 – Aug 29) — 56mi total, long: B2B: 22+16\n\nTo
+ day: Rehab + mobility\n\nWeek focus: Peak phase opens. Bigger B2B. Fuel 
+ and gear dialed. Gym reduces volume\, keeps frequency.\n\nNote: 38mi wee
+ kend. If SMYFS runs another training event in this window\, swap it in a
+ s your Saturday long run — course-specific miles beat anything else.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w7-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:🟢 W7: 6mi very easy
+DESCRIPTION:Week 7 (Aug 23 – Aug 29) — 56mi total, long: B2B: 22+16\n\nTo
+ day: 6mi very easy\n\nWeek focus: Peak phase opens. Bigger B2B. Fuel and
+  gear dialed. Gym reduces volume\, keeps frequency.\n\nNote: 38mi weeken
+ d. If SMYFS runs another training event in this window\, swap it in as y
+ our Saturday long run — course-specific miles beat anything else.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w7-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:🏋️ W7: Gym light
+DESCRIPTION:Week 7 (Aug 23 – Aug 29) — 56mi total, long: B2B: 22+16\n\nTo
+ day: Gym light\n\nWeek focus: Peak phase opens. Bigger B2B. Fuel and gea
+ r dialed. Gym reduces volume\, keeps frequency.\n\nNote: 38mi weekend. I
+ f SMYFS runs another training event in this window\, swap it in as your 
+ Saturday long run — course-specific miles beat anything else.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w7-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:🏃 W7: 8mi easy
+DESCRIPTION:Week 7 (Aug 23 – Aug 29) — 56mi total, long: B2B: 22+16\n\nTo
+ day: 8mi easy\n\nWeek focus: Peak phase opens. Bigger B2B. Fuel and gear
+  dialed. Gym reduces volume\, keeps frequency.\n\nNote: 38mi weekend. If
+  SMYFS runs another training event in this window\, swap it in as your S
+ aturday long run — course-specific miles beat anything else.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w7-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY:😴 W7: Rest
+DESCRIPTION:Week 7 (Aug 23 – Aug 29) — 56mi total, long: B2B: 22+16\n\nTo
+ day: Rest\n\nWeek focus: Peak phase opens. Bigger B2B. Fuel and gear dia
+ led. Gym reduces volume\, keeps frequency.\n\nNote: 38mi weekend. If SMY
+ FS runs another training event in this window\, swap it in as your Satur
+ day long run — course-specific miles beat anything else.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w8-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260906
+SUMMARY:🏃 W8: 18mi easy — no race pace
+DESCRIPTION:Week 8 (Aug 30 – Sep 5) — 44mi total, long: 18mi\n\nToday: 18
+ mi easy — no race pace\n\nWeek focus: ⬇ Cutback inside the peak. Recover
+  hard so weeks 9–10 land. Reassess knee/shin honestly.\n\nNote: Midpoint
+  gut check: if the knee/shin is still flaring at this point\, we shift t
+ he goal to a confident finish and drop the 30-miler in week 10 to 26. A 
+ healthy finish beats a hurt sub-24 attempt.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W8: 18mi easy — no race pace — prep gear & nutri
+ tion tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w8-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+SUMMARY:😴 W8: Walk + hydro bed
+DESCRIPTION:Week 8 (Aug 30 – Sep 5) — 44mi total, long: 18mi\n\nToday: Wa
+ lk + hydro bed\n\nWeek focus: ⬇ Cutback inside the peak. Recover hard so
+  weeks 9–10 land. Reassess knee/shin honestly.\n\nNote: Midpoint gut che
+ ck: if the knee/shin is still flaring at this point\, we shift the goal 
+ to a confident finish and drop the 30-miler in week 10 to 26. A healthy 
+ finish beats a hurt sub-24 attempt.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w8-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260901
+SUMMARY:🏋️ W8: Rehab + full legs
+DESCRIPTION:Week 8 (Aug 30 – Sep 5) — 44mi total, long: 18mi\n\nToday: Re
+ hab + full legs\n\nWeek focus: ⬇ Cutback inside the peak. Recover hard s
+ o weeks 9–10 land. Reassess knee/shin honestly.\n\nNote: Midpoint gut ch
+ eck: if the knee/shin is still flaring at this point\, we shift the goal
+  to a confident finish and drop the 30-miler in week 10 to 26. A healthy
+  finish beats a hurt sub-24 attempt.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w8-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+SUMMARY:🟢 W8: 5mi easy
+DESCRIPTION:Week 8 (Aug 30 – Sep 5) — 44mi total, long: 18mi\n\nToday: 5m
+ i easy\n\nWeek focus: ⬇ Cutback inside the peak. Recover hard so weeks 9
+ –10 land. Reassess knee/shin honestly.\n\nNote: Midpoint gut check: if t
+ he knee/shin is still flaring at this point\, we shift the goal to a con
+ fident finish and drop the 30-miler in week 10 to 26. A healthy finish b
+ eats a hurt sub-24 attempt.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w8-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260902
+DTEND;VALUE=DATE:20260903
+SUMMARY:🏋️ W8: Gym
+DESCRIPTION:Week 8 (Aug 30 – Sep 5) — 44mi total, long: 18mi\n\nToday: Gy
+ m\n\nWeek focus: ⬇ Cutback inside the peak. Recover hard so weeks 9–10 l
+ and. Reassess knee/shin honestly.\n\nNote: Midpoint gut check: if the kn
+ ee/shin is still flaring at this point\, we shift the goal to a confiden
+ t finish and drop the 30-miler in week 10 to 26. A healthy finish beats 
+ a hurt sub-24 attempt.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w8-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260904
+SUMMARY:🏃 W8: 7mi easy
+DESCRIPTION:Week 8 (Aug 30 – Sep 5) — 44mi total, long: 18mi\n\nToday: 7m
+ i easy\n\nWeek focus: ⬇ Cutback inside the peak. Recover hard so weeks 9
+ –10 land. Reassess knee/shin honestly.\n\nNote: Midpoint gut check: if t
+ he knee/shin is still flaring at this point\, we shift the goal to a con
+ fident finish and drop the 30-miler in week 10 to 26. A healthy finish b
+ eats a hurt sub-24 attempt.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w8-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20260905
+SUMMARY:🏋️ W8: Gym + stretch
+DESCRIPTION:Week 8 (Aug 30 – Sep 5) — 44mi total, long: 18mi\n\nToday: Gy
+ m + stretch\n\nWeek focus: ⬇ Cutback inside the peak. Recover hard so we
+ eks 9–10 land. Reassess knee/shin honestly.\n\nNote: Midpoint gut check:
+  if the knee/shin is still flaring at this point\, we shift the goal to 
+ a confident finish and drop the 30-miler in week 10 to 26. A healthy fin
+ ish beats a hurt sub-24 attempt.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w9-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
+SUMMARY:🏃 W9: 22mi\, last 4mi at race pace (13:45/mi)
+DESCRIPTION:Week 9 (Sep 6 – Sep 12) — 60mi total, long: B2B: 22+18\n\nTod
+ ay: 22mi\, last 4mi at race pace (13:45/mi)\n\nWeek focus: Biggest B2B w
+ eekend of the plan. 40mi. This is the key fitness block for the 100.\n\n
+ Note: Wathena is flat river/levee terrain\, so this weekend's cumulative
+  fatigue is harder than the race's hills will be. If you finish this fee
+ ling okay\, sub-24 is on the table.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W9: 22mi\, last 4mi at race pace (13:45/mi) — pr
+ ep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w9-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260907
+SUMMARY:🔁 W9: 18mi — full race nutrition + gear rehearsal
+DESCRIPTION:Week 9 (Sep 6 – Sep 12) — 60mi total, long: B2B: 22+18\n\nTod
+ ay: 18mi — full race nutrition + gear rehearsal\n\nWeek focus: Biggest B
+ 2B weekend of the plan. 40mi. This is the key fitness block for the 100.
+ \n\nNote: Wathena is flat river/levee terrain\, so this weekend's cumula
+ tive fatigue is harder than the race's hills will be. If you finish this
+  feeling okay\, sub-24 is on the table.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🔁 W9: 18mi — full race nutrition + gear rehearsal 
+ — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w9-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+SUMMARY:🏋️ W9: Rehab + mobility only
+DESCRIPTION:Week 9 (Sep 6 – Sep 12) — 60mi total, long: B2B: 22+18\n\nTod
+ ay: Rehab + mobility only\n\nWeek focus: Biggest B2B weekend of the plan
+ . 40mi. This is the key fitness block for the 100.\n\nNote: Wathena is f
+ lat river/levee terrain\, so this weekend's cumulative fatigue is harder
+  than the race's hills will be. If you finish this feeling okay\, sub-24
+  is on the table.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w9-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260909
+SUMMARY:🟢 W9: 5mi easy
+DESCRIPTION:Week 9 (Sep 6 – Sep 12) — 60mi total, long: B2B: 22+18\n\nTod
+ ay: 5mi easy\n\nWeek focus: Biggest B2B weekend of the plan. 40mi. This 
+ is the key fitness block for the 100.\n\nNote: Wathena is flat river/lev
+ ee terrain\, so this weekend's cumulative fatigue is harder than the rac
+ e's hills will be. If you finish this feeling okay\, sub-24 is on the ta
+ ble.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w9-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:🏋️ W9: Gym light
+DESCRIPTION:Week 9 (Sep 6 – Sep 12) — 60mi total, long: B2B: 22+18\n\nTod
+ ay: Gym light\n\nWeek focus: Biggest B2B weekend of the plan. 40mi. This
+  is the key fitness block for the 100.\n\nNote: Wathena is flat river/le
+ vee terrain\, so this weekend's cumulative fatigue is harder than the ra
+ ce's hills will be. If you finish this feeling okay\, sub-24 is on the t
+ able.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w9-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20260911
+SUMMARY:🏃 W9: 8mi easy
+DESCRIPTION:Week 9 (Sep 6 – Sep 12) — 60mi total, long: B2B: 22+18\n\nTod
+ ay: 8mi easy\n\nWeek focus: Biggest B2B weekend of the plan. 40mi. This 
+ is the key fitness block for the 100.\n\nNote: Wathena is flat river/lev
+ ee terrain\, so this weekend's cumulative fatigue is harder than the rac
+ e's hills will be. If you finish this feeling okay\, sub-24 is on the ta
+ ble.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w9-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:😴 W9: Rest
+DESCRIPTION:Week 9 (Sep 6 – Sep 12) — 60mi total, long: B2B: 22+18\n\nTod
+ ay: Rest\n\nWeek focus: Biggest B2B weekend of the plan. 40mi. This is t
+ he key fitness block for the 100.\n\nNote: Wathena is flat river/levee t
+ errain\, so this weekend's cumulative fatigue is harder than the race's 
+ hills will be. If you finish this feeling okay\, sub-24 is on the table.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w10-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+SUMMARY:🏃 W10: 30mi — start 9–10pm\, Sara on mobile aid\, full race kit
+DESCRIPTION:Week 10 (Sep 13 – Sep 19) — 62mi total, long: 30mi (night)\n\
+ nToday: 30mi — start 9–10pm\, Sara on mobile aid\, full race kit\n\nWeek
+  focus: 🔴 PEAK WEEK. 30-mile single long run at night. Your longest tra
+ ining effort and full dress rehearsal.\n\nNote: Capped at 30mi (not 32) 
+ to protect the knee/shin. Night start matters — SMYFS runs into the dark
+  and you already run strong at night. Test headlamp\, layers\, and your 
+ exact race-day food here.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W10: 30mi — start 9–10pm\, Sara on mobile aid\, 
+ full race kit — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w10-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20260914
+SUMMARY:🟢 W10: 4mi very easy shakeout
+DESCRIPTION:Week 10 (Sep 13 – Sep 19) — 62mi total, long: 30mi (night)\n\
+ nToday: 4mi very easy shakeout\n\nWeek focus: 🔴 PEAK WEEK. 30-mile sing
+ le long run at night. Your longest training effort and full dress rehear
+ sal.\n\nNote: Capped at 30mi (not 32) to protect the knee/shin. Night st
+ art matters — SMYFS runs into the dark and you already run strong at nig
+ ht. Test headlamp\, layers\, and your exact race-day food here.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w10-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
+SUMMARY:🏋️ W10: Rehab + mobility
+DESCRIPTION:Week 10 (Sep 13 – Sep 19) — 62mi total, long: 30mi (night)\n\
+ nToday: Rehab + mobility\n\nWeek focus: 🔴 PEAK WEEK. 30-mile single lon
+ g run at night. Your longest training effort and full dress rehearsal.\n
+ \nNote: Capped at 30mi (not 32) to protect the knee/shin. Night start ma
+ tters — SMYFS runs into the dark and you already run strong at night. Te
+ st headlamp\, layers\, and your exact race-day food here.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w10-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260916
+SUMMARY:🟢 W10: 5mi easy
+DESCRIPTION:Week 10 (Sep 13 – Sep 19) — 62mi total, long: 30mi (night)\n\
+ nToday: 5mi easy\n\nWeek focus: 🔴 PEAK WEEK. 30-mile single long run at
+  night. Your longest training effort and full dress rehearsal.\n\nNote: 
+ Capped at 30mi (not 32) to protect the knee/shin. Night start matters — 
+ SMYFS runs into the dark and you already run strong at night. Test headl
+ amp\, layers\, and your exact race-day food here.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w10-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:🏋️ W10: Gym light
+DESCRIPTION:Week 10 (Sep 13 – Sep 19) — 62mi total, long: 30mi (night)\n\
+ nToday: Gym light\n\nWeek focus: 🔴 PEAK WEEK. 30-mile single long run a
+ t night. Your longest training effort and full dress rehearsal.\n\nNote:
+  Capped at 30mi (not 32) to protect the knee/shin. Night start matters —
+  SMYFS runs into the dark and you already run strong at night. Test head
+ lamp\, layers\, and your exact race-day food here.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w10-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:🏃 W10: 9mi moderate
+DESCRIPTION:Week 10 (Sep 13 – Sep 19) — 62mi total, long: 30mi (night)\n\
+ nToday: 9mi moderate\n\nWeek focus: 🔴 PEAK WEEK. 30-mile single long ru
+ n at night. Your longest training effort and full dress rehearsal.\n\nNo
+ te: Capped at 30mi (not 32) to protect the knee/shin. Night start matter
+ s — SMYFS runs into the dark and you already run strong at night. Test h
+ eadlamp\, layers\, and your exact race-day food here.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w10-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+SUMMARY:🏋️ W10: Gym + 2mi easy
+DESCRIPTION:Week 10 (Sep 13 – Sep 19) — 62mi total, long: 30mi (night)\n\
+ nToday: Gym + 2mi easy\n\nWeek focus: 🔴 PEAK WEEK. 30-mile single long 
+ run at night. Your longest training effort and full dress rehearsal.\n\n
+ Note: Capped at 30mi (not 32) to protect the knee/shin. Night start matt
+ ers — SMYFS runs into the dark and you already run strong at night. Test
+  headlamp\, layers\, and your exact race-day food here.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w11-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260927
+SUMMARY:🏃 W11: 18mi at easy/moderate effort
+DESCRIPTION:Week 11 (Sep 20 – Sep 26) — 48mi total, long: B2B: 18+14\n\nT
+ oday: 18mi at easy/moderate effort\n\nWeek focus: Final quality block be
+ fore taper. Lower than peak\, still race-specific. Then we back off.\n\n
+ Note: Last chance to log meaningful fatigue. After this\, the work is do
+ ne — everything from here is about arriving fresh and healthy.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W11: 18mi at easy/moderate effort — prep gear & 
+ nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w11-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:🔁 W11: 14mi easy B2B
+DESCRIPTION:Week 11 (Sep 20 – Sep 26) — 48mi total, long: B2B: 18+14\n\nT
+ oday: 14mi easy B2B\n\nWeek focus: Final quality block before taper. Low
+ er than peak\, still race-specific. Then we back off.\n\nNote: Last chan
+ ce to log meaningful fatigue. After this\, the work is done — everything
+  from here is about arriving fresh and healthy.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🔁 W11: 14mi easy B2B — prep gear & nutrition tonig
+ ht
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w11-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:🏋️ W11: Rehab + legs
+DESCRIPTION:Week 11 (Sep 20 – Sep 26) — 48mi total, long: B2B: 18+14\n\nT
+ oday: Rehab + legs\n\nWeek focus: Final quality block before taper. Lowe
+ r than peak\, still race-specific. Then we back off.\n\nNote: Last chanc
+ e to log meaningful fatigue. After this\, the work is done — everything 
+ from here is about arriving fresh and healthy.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w11-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:🟢 W11: 5mi easy
+DESCRIPTION:Week 11 (Sep 20 – Sep 26) — 48mi total, long: B2B: 18+14\n\nT
+ oday: 5mi easy\n\nWeek focus: Final quality block before taper. Lower th
+ an peak\, still race-specific. Then we back off.\n\nNote: Last chance to
+  log meaningful fatigue. After this\, the work is done — everything from
+  here is about arriving fresh and healthy.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w11-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:🏋️ W11: Gym
+DESCRIPTION:Week 11 (Sep 20 – Sep 26) — 48mi total, long: B2B: 18+14\n\nT
+ oday: Gym\n\nWeek focus: Final quality block before taper. Lower than pe
+ ak\, still race-specific. Then we back off.\n\nNote: Last chance to log 
+ meaningful fatigue. After this\, the work is done — everything from here
+  is about arriving fresh and healthy.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w11-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:🏃 W11: 8mi with 2x10 min tempo
+DESCRIPTION:Week 11 (Sep 20 – Sep 26) — 48mi total, long: B2B: 18+14\n\nT
+ oday: 8mi with 2x10 min tempo\n\nWeek focus: Final quality block before 
+ taper. Lower than peak\, still race-specific. Then we back off.\n\nNote:
+  Last chance to log meaningful fatigue. After this\, the work is done — 
+ everything from here is about arriving fresh and healthy.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w11-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:🏋️ W11: Gym + stretch
+DESCRIPTION:Week 11 (Sep 20 – Sep 26) — 48mi total, long: B2B: 18+14\n\nT
+ oday: Gym + stretch\n\nWeek focus: Final quality block before taper. Low
+ er than peak\, still race-specific. Then we back off.\n\nNote: Last chan
+ ce to log meaningful fatigue. After this\, the work is done — everything
+  from here is about arriving fresh and healthy.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w12-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:🏃 W12: 16mi easy — may feel sluggish\, that's normal
+DESCRIPTION:Week 12 (Sep 27 – Oct 3) — 40mi total, long: 16mi\n\nToday: 1
+ 6mi easy — may feel sluggish\, that's normal\n\nWeek focus: ⬇ Taper begi
+ ns. Mileage drops ~35%\, intensity stays. Legs will feel flat — that's g
+ lycogen loading.\n\nNote: Taper madness hits here — you'll feel out of s
+ hape and want to add miles. Don't. Your fitness is banked. Start preppin
+ g drop bags and your aid-station plan with Sara.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W12: 16mi easy — may feel sluggish\, that's norm
+ al — prep gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w12-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+SUMMARY:😴 W12: Rest or short walk
+DESCRIPTION:Week 12 (Sep 27 – Oct 3) — 40mi total, long: 16mi\n\nToday: R
+ est or short walk\n\nWeek focus: ⬇ Taper begins. Mileage drops ~35%\, in
+ tensity stays. Legs will feel flat — that's glycogen loading.\n\nNote: T
+ aper madness hits here — you'll feel out of shape and want to add miles.
+  Don't. Your fitness is banked. Start prepping drop bags and your aid-st
+ ation plan with Sara.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w12-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:🏋️ W12: Rehab + moderate legs (not heavy)
+DESCRIPTION:Week 12 (Sep 27 – Oct 3) — 40mi total, long: 16mi\n\nToday: R
+ ehab + moderate legs (not heavy)\n\nWeek focus: ⬇ Taper begins. Mileage 
+ drops ~35%\, intensity stays. Legs will feel flat — that's glycogen load
+ ing.\n\nNote: Taper madness hits here — you'll feel out of shape and wan
+ t to add miles. Don't. Your fitness is banked. Start prepping drop bags 
+ and your aid-station plan with Sara.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w12-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:🟢 W12: 6mi easy + 4x1mi strides
+DESCRIPTION:Week 12 (Sep 27 – Oct 3) — 40mi total, long: 16mi\n\nToday: 6
+ mi easy + 4x1mi strides\n\nWeek focus: ⬇ Taper begins. Mileage drops ~35
+ %\, intensity stays. Legs will feel flat — that's glycogen loading.\n\nN
+ ote: Taper madness hits here — you'll feel out of shape and want to add 
+ miles. Don't. Your fitness is banked. Start prepping drop bags and your 
+ aid-station plan with Sara.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w12-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:🏋️ W12: Gym
+DESCRIPTION:Week 12 (Sep 27 – Oct 3) — 40mi total, long: 16mi\n\nToday: G
+ ym\n\nWeek focus: ⬇ Taper begins. Mileage drops ~35%\, intensity stays. 
+ Legs will feel flat — that's glycogen loading.\n\nNote: Taper madness hi
+ ts here — you'll feel out of shape and want to add miles. Don't. Your fi
+ tness is banked. Start prepping drop bags and your aid-station plan with
+  Sara.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w12-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:🏃 W12: 7mi moderate
+DESCRIPTION:Week 12 (Sep 27 – Oct 3) — 40mi total, long: 16mi\n\nToday: 7
+ mi moderate\n\nWeek focus: ⬇ Taper begins. Mileage drops ~35%\, intensit
+ y stays. Legs will feel flat — that's glycogen loading.\n\nNote: Taper m
+ adness hits here — you'll feel out of shape and want to add miles. Don't
+ . Your fitness is banked. Start prepping drop bags and your aid-station 
+ plan with Sara.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w12-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:🏋️ W12: Gym light
+DESCRIPTION:Week 12 (Sep 27 – Oct 3) — 40mi total, long: 16mi\n\nToday: G
+ ym light\n\nWeek focus: ⬇ Taper begins. Mileage drops ~35%\, intensity s
+ tays. Legs will feel flat — that's glycogen loading.\n\nNote: Taper madn
+ ess hits here — you'll feel out of shape and want to add miles. Don't. Y
+ our fitness is banked. Start prepping drop bags and your aid-station pla
+ n with Sara.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w13-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:🏃 W13: 12mi easy — last moderately long run
+DESCRIPTION:Week 13 (Oct 4 – Oct 10) — 28mi total, long: 12mi\n\nToday: 1
+ 2mi easy — last moderately long run\n\nWeek focus: Sharpen. Easy miles\,
+  stay fresh\, lock in gear. Rehab continues but gym goes light.\n\nNote:
+  Final gear check: confirm race shoes have 100–200mi on them (broken in\
+ , not worn out)\, headlamps charged\, poles if using\, nutrition stocked
+ . Nothing new on race day.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W13: 12mi easy — last moderately long run — prep
+  gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w13-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261005
+SUMMARY:😴 W13: Rest
+DESCRIPTION:Week 13 (Oct 4 – Oct 10) — 28mi total, long: 12mi\n\nToday: R
+ est\n\nWeek focus: Sharpen. Easy miles\, stay fresh\, lock in gear. Reha
+ b continues but gym goes light.\n\nNote: Final gear check: confirm race 
+ shoes have 100–200mi on them (broken in\, not worn out)\, headlamps char
+ ged\, poles if using\, nutrition stocked. Nothing new on race day.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w13-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:🏋️ W13: Rehab + body-weight/mobility only
+DESCRIPTION:Week 13 (Oct 4 – Oct 10) — 28mi total, long: 12mi\n\nToday: R
+ ehab + body-weight/mobility only\n\nWeek focus: Sharpen. Easy miles\, st
+ ay fresh\, lock in gear. Rehab continues but gym goes light.\n\nNote: Fi
+ nal gear check: confirm race shoes have 100–200mi on them (broken in\, n
+ ot worn out)\, headlamps charged\, poles if using\, nutrition stocked. N
+ othing new on race day.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w13-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:🟢 W13: 5mi easy + strides
+DESCRIPTION:Week 13 (Oct 4 – Oct 10) — 28mi total, long: 12mi\n\nToday: 5
+ mi easy + strides\n\nWeek focus: Sharpen. Easy miles\, stay fresh\, lock
+  in gear. Rehab continues but gym goes light.\n\nNote: Final gear check:
+  confirm race shoes have 100–200mi on them (broken in\, not worn out)\, 
+ headlamps charged\, poles if using\, nutrition stocked. Nothing new on r
+ ace day.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w13-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:🏋️ W13: Gym stretching focus
+DESCRIPTION:Week 13 (Oct 4 – Oct 10) — 28mi total, long: 12mi\n\nToday: G
+ ym stretching focus\n\nWeek focus: Sharpen. Easy miles\, stay fresh\, lo
+ ck in gear. Rehab continues but gym goes light.\n\nNote: Final gear chec
+ k: confirm race shoes have 100–200mi on them (broken in\, not worn out)\
+ , headlamps charged\, poles if using\, nutrition stocked. Nothing new on
+  race day.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w13-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:🟢 W13: 4mi easy
+DESCRIPTION:Week 13 (Oct 4 – Oct 10) — 28mi total, long: 12mi\n\nToday: 4
+ mi easy\n\nWeek focus: Sharpen. Easy miles\, stay fresh\, lock in gear. 
+ Rehab continues but gym goes light.\n\nNote: Final gear check: confirm r
+ ace shoes have 100–200mi on them (broken in\, not worn out)\, headlamps 
+ charged\, poles if using\, nutrition stocked. Nothing new on race day.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w13-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:😴 W13: Rest
+DESCRIPTION:Week 13 (Oct 4 – Oct 10) — 28mi total, long: 12mi\n\nToday: R
+ est\n\nWeek focus: Sharpen. Easy miles\, stay fresh\, lock in gear. Reha
+ b continues but gym goes light.\n\nNote: Final gear check: confirm race 
+ shoes have 100–200mi on them (broken in\, not worn out)\, headlamps char
+ ged\, poles if using\, nutrition stocked. Nothing new on race day.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w14-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:🏃 W14: 8mi very easy — enjoy it
+DESCRIPTION:Week 14 (Oct 11 – Oct 17) — 18mi total, long: 8mi\n\nToday: 8
+ mi very easy — enjoy it\n\nWeek focus: Rest is the training now. Legs sh
+ ould feel springy by Thursday. Bank sleep all week.\n\nNote: Sleep bank:
+  8–9hrs every night this week. Pre-loaded sleep matters far more than th
+ e night before the race\, when nerves make sleep hard anyway.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏃 W14: 8mi very easy — enjoy it — prep gear & nutr
+ ition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w14-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:😴 W14: Rest
+DESCRIPTION:Week 14 (Oct 11 – Oct 17) — 18mi total, long: 8mi\n\nToday: R
+ est\n\nWeek focus: Rest is the training now. Legs should feel springy by
+  Thursday. Bank sleep all week.\n\nNote: Sleep bank: 8–9hrs every night 
+ this week. Pre-loaded sleep matters far more than the night before the r
+ ace\, when nerves make sleep hard anyway.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w14-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:🏋️ W14: Rehab + mobility only
+DESCRIPTION:Week 14 (Oct 11 – Oct 17) — 18mi total, long: 8mi\n\nToday: R
+ ehab + mobility only\n\nWeek focus: Rest is the training now. Legs shoul
+ d feel springy by Thursday. Bank sleep all week.\n\nNote: Sleep bank: 8–
+ 9hrs every night this week. Pre-loaded sleep matters far more than the n
+ ight before the race\, when nerves make sleep hard anyway.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w14-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:🟢 W14: 4mi easy
+DESCRIPTION:Week 14 (Oct 11 – Oct 17) — 18mi total, long: 8mi\n\nToday: 4
+ mi easy\n\nWeek focus: Rest is the training now. Legs should feel spring
+ y by Thursday. Bank sleep all week.\n\nNote: Sleep bank: 8–9hrs every ni
+ ght this week. Pre-loaded sleep matters far more than the night before t
+ he race\, when nerves make sleep hard anyway.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w14-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:🟢 W14: 3mi easy + 4x100m strides
+DESCRIPTION:Week 14 (Oct 11 – Oct 17) — 18mi total, long: 8mi\n\nToday: 3
+ mi easy + 4x100m strides\n\nWeek focus: Rest is the training now. Legs s
+ hould feel springy by Thursday. Bank sleep all week.\n\nNote: Sleep bank
+ : 8–9hrs every night this week. Pre-loaded sleep matters far more than t
+ he night before the race\, when nerves make sleep hard anyway.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w14-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:😴 W14: Rest
+DESCRIPTION:Week 14 (Oct 11 – Oct 17) — 18mi total, long: 8mi\n\nToday: R
+ est\n\nWeek focus: Rest is the training now. Legs should feel springy by
+  Thursday. Bank sleep all week.\n\nNote: Sleep bank: 8–9hrs every night 
+ this week. Pre-loaded sleep matters far more than the night before the r
+ ace\, when nerves make sleep hard anyway.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w14-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:😴 W14: Rest — travel prep
+DESCRIPTION:Week 14 (Oct 11 – Oct 17) — 18mi total, long: 8mi\n\nToday: R
+ est — travel prep\n\nWeek focus: Rest is the training now. Legs should f
+ eel springy by Thursday. Bank sleep all week.\n\nNote: Sleep bank: 8–9hr
+ s every night this week. Pre-loaded sleep matters far more than the nigh
+ t before the race\, when nerves make sleep hard anyway.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w15-sun@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+SUMMARY:🟢 W15: 3mi very easy shakeout
+DESCRIPTION:Week 15 (Oct 18 – Oct 24) — 105mi total, long: 100mi RACE\n\n
+ Today: 3mi very easy shakeout\n\nWeek focus: 🏁 RACE WEEK. Easy shakeout
+ s\, rest\, eat\, drive to Wathena\, and run 100 miles Saturday.\n\nNote:
+  Confirm the exact start time with the RD and set Friday's sleep accordi
+ ngly. Keep your ankle band + calf mobility going even race week — it's k
+ ept you healthy this whole block.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w15-mon@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:😴 W15: Rest — keep doing knee/shin mobility
+DESCRIPTION:Week 15 (Oct 18 – Oct 24) — 105mi total, long: 100mi RACE\n\n
+ Today: Rest — keep doing knee/shin mobility\n\nWeek focus: 🏁 RACE WEEK.
+  Easy shakeouts\, rest\, eat\, drive to Wathena\, and run 100 miles Satu
+ rday.\n\nNote: Confirm the exact start time with the RD and set Friday's
+  sleep accordingly. Keep your ankle band + calf mobility going even race
+  week — it's kept you healthy this whole block.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w15-tue@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:🟢 W15: 2mi easy walk/jog
+DESCRIPTION:Week 15 (Oct 18 – Oct 24) — 105mi total, long: 100mi RACE\n\n
+ Today: 2mi easy walk/jog\n\nWeek focus: 🏁 RACE WEEK. Easy shakeouts\, r
+ est\, eat\, drive to Wathena\, and run 100 miles Saturday.\n\nNote: Conf
+ irm the exact start time with the RD and set Friday's sleep accordingly.
+  Keep your ankle band + calf mobility going even race week — it's kept y
+ ou healthy this whole block.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w15-wed@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:😴 W15: Rest — pack bags\, finalize crew plan with Sara
+DESCRIPTION:Week 15 (Oct 18 – Oct 24) — 105mi total, long: 100mi RACE\n\n
+ Today: Rest — pack bags\, finalize crew plan with Sara\n\nWeek focus: 🏁
+  RACE WEEK. Easy shakeouts\, rest\, eat\, drive to Wathena\, and run 100
+  miles Saturday.\n\nNote: Confirm the exact start time with the RD and s
+ et Friday's sleep accordingly. Keep your ankle band + calf mobility goin
+ g even race week — it's kept you healthy this whole block.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w15-thu@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:😴 W15: Drive to Wathena. Check in. Eat well. Sleep early.
+DESCRIPTION:Week 15 (Oct 18 – Oct 24) — 105mi total, long: 100mi RACE\n\n
+ Today: Drive to Wathena. Check in. Eat well. Sleep early.\n\nWeek focus:
+  🏁 RACE WEEK. Easy shakeouts\, rest\, eat\, drive to Wathena\, and run 
+ 100 miles Saturday.\n\nNote: Confirm the exact start time with the RD an
+ d set Friday's sleep accordingly. Keep your ankle band + calf mobility g
+ oing even race week — it's kept you healthy this whole block.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w15-fri@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:😴 W15: Rest. Nap midday. Lay out gear. Eat. Sleep early.
+DESCRIPTION:Week 15 (Oct 18 – Oct 24) — 105mi total, long: 100mi RACE\n\n
+ Today: Rest. Nap midday. Lay out gear. Eat. Sleep early.\n\nWeek focus: 
+ 🏁 RACE WEEK. Easy shakeouts\, rest\, eat\, drive to Wathena\, and run 1
+ 00 miles Saturday.\n\nNote: Confirm the exact start time with the RD and
+  set Friday's sleep accordingly. Keep your ankle band + calf mobility go
+ ing even race week — it's kept you healthy this whole block.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smyfs100-w15-sat@smyfs-plan
+DTSTAMP:20260712T162934Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:🏁 W15: 🔴 SMYFS 100 Mile — RACE DAY (Oct 24)
+DESCRIPTION:Week 15 (Oct 18 – Oct 24) — 105mi total, long: 100mi RACE\n\n
+ Today: 🔴 SMYFS 100 Mile — RACE DAY (Oct 24)\n\nWeek focus: 🏁 RACE WEEK
+ . Easy shakeouts\, rest\, eat\, drive to Wathena\, and run 100 miles Sat
+ urday.\n\nNote: Confirm the exact start time with the RD and set Friday'
+ s sleep accordingly. Keep your ankle band + calf mobility going even rac
+ e week — it's kept you healthy this whole block.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: 🏁 W15: 🔴 SMYFS 100 Mile — RACE DAY (Oct 24) — pre
+ p gear & nutrition tonight
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

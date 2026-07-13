@@ -1,0 +1,22 @@
+{
+  "name": "smyfs-100-plan",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Interactive 100-mile ultramarathon training plan for the Show Me Your Free State race.",
+  "scripts": {
+    "dev": "npm run ics && vite",
+    "ics": "node scripts/generate-ics.mjs",
+    "prebuild": "npm run ics",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
