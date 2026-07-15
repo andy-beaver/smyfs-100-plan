@@ -202,7 +202,7 @@ export default function TrainingPlan() {
                     {p.id === "reintro" && "Weeks 1–2 hold near your current ~28mi/wk while the left knee and shin settle. All easy, rehab stays daily. We only ramp once two clean weeks confirm the tissue is ready — this gate protects the whole block."}
                     {p.id === "build" && "Progressive mileage with the first back-to-back weekend in Week 6. Gentle, flat, short tempo introduced to address your threshold gap without provoking the knee. Cutback in Week 5. Race nutrition practiced every long run."}
                     {p.id === "peak" && "Highest stress of the plan. Week 10 is the peak: a 30-mile night long run (capped from 32 to protect the shin). B2B weekends up to 40 miles. Cutback in Week 8, plus a midpoint knee/shin gut-check that can adjust the goal if needed."}
-                    {p.id === "taper" && "3-week taper. Mileage drops sharply, intensity holds. Expect to feel flat — that's normal. Time for drop bags, crew briefing with Sara, gear checks, and banking sleep."}
+                    {p.id === "taper" && "3-week taper. Mileage drops sharply, intensity holds. Expect to feel flat — that's normal. Time for drop bags, crew briefing with crew, gear checks, and banking sleep."}
                     {p.id === "race" && "Easy shakeouts, travel to Wathena, sleep loading, then 100 miles Saturday Oct 24. Sub-24 is a realistic stretch goal on your current engine if the knee/shin stay quiet."}
                   </div>
                 </div>
@@ -346,11 +346,11 @@ export default function TrainingPlan() {
             </div>
 
             <div style={{ marginTop: 16, background: "#1A0A00", border: "1px solid #F59E0B30", borderRadius: 8, padding: 20 }}>
-              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", marginBottom: 12 }}>SARA'S CREW STATIONS (SUGGESTED)</div>
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", marginBottom: 12 }}>CREW STATIONS (SUGGESTED)</div>
               {[
                 ["Mile ~25", "First crew access. Hot broth/ramen, sock check, 90-second stop max."],
                 ["Mile ~50", "Halfway — the most important stop. Shoe swap if needed, real food, 5 min OK."],
-                ["Mile ~70", "Night hours. Fresh headlamp, warm layers. Give Sara a ±2hr time window."],
+                ["Mile ~70", "Night hours. Fresh headlamp, warm layers. Give Crew a ±2hr time window."],
                 ["Mile ~85", "Final push. Last food/drink top-off. Under 3hr to go if on pace."],
               ].map(([loc, note]) => (
                 <div key={loc} style={{ marginBottom: 10 }}>
@@ -446,7 +446,7 @@ export default function TrainingPlan() {
               {
                 title: "Night Running: A Real Advantage",
                 color: "#A78BFA",
-                body: "Your Strava is full of night runs and you've nailed midnight long efforts. SMYFS runs into the dark, so this is a genuine edge. The Week 10 peak long run is scheduled as a 9–10pm 30-miler specifically to rehearse racing through the night with Sara crewing.",
+                body: "Your Strava is full of night runs and you've nailed midnight long efforts. SMYFS runs into the dark, so this is a genuine edge. The Week 10 peak long run is scheduled as a 9–10pm 30-miler specifically to rehearse racing through the night with crew crewing.",
               },
               {
                 title: "Strength: Reduce Volume, Keep Frequency",
