@@ -12,7 +12,12 @@
 
 import { writeFileSync, mkdirSync } from "node:fs";
 import { WEEKS, PLAN_START } from "../src/plan-data.js";
-import { buildPlanDays, isoDate } from "./plan-utils.mjs";
+import { buildPlanDays, isoDate, checkPlanTotals } from "./plan-utils.mjs";
+
+const planProblems = checkPlanTotals();
+if (planProblems.length) {
+  console.warn("⚠️  Plan totals do not reconcile:\n  " + planProblems.join("\n  "));
+}
 
 const MOCK = process.argv.includes("--mock");
 const PRIVACY_MINIMAL = process.env.PRIVACY_MODE === "minimal";

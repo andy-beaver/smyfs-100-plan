@@ -167,9 +167,9 @@ and links. To publish only aggregate numbers, add a repository *variable* (not s
 - Target distances are parsed from the workout text (`"20mi at goal race effort (~14:00/mi)"` →
   20 miles, correctly ignoring the pace). See `scripts/plan-utils.mjs`.
 
-> **Note on weekly totals:** each week's stated mileage is slightly higher than the sum of its
-> itemised day targets (warm-ups and gym-day shakeouts aren't all written out). Week-level
-> compliance uses the stated total, so a "100%" week means you hit the real planned volume.
+> **Weekly totals reconcile exactly.** Each week's stated mileage equals the sum of its daily
+> targets. `checkPlanTotals()` in `scripts/plan-utils.mjs` enforces this and prints a warning
+> during the build if the two ever drift apart, so editing the plan can't silently break it.
 
 ### Testing without credentials
 

@@ -20,8 +20,12 @@ export const DAY_OFFSET = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun:
  * Strategy: take the FIRST "<number>mi" occurrence, ignoring any that are part
  * of a pace expression (preceded by "/" or ":" as in "14:00/mi").
  */
-export function parseTargetMiles(desc) {
+export function parseTargetMiles(desc, type) {
   if (/RACE DAY/i.test(desc)) return 100;
+
+  // A rest day contributes no mileage even if its text mentions a distance
+  // (e.g. "Rest — save your legs for tomorrow night's long run").
+  if (type === "rest") return 0;
 
   const re = /(\d+(?:\.\d+)?)\s*mi\b/gi;
   let m;
@@ -29,6 +33,9 @@ export function parseTargetMiles(desc) {
     const charBefore = desc[m.index - 1];
     // Skip pace fragments like "14:00/mi" where the digits belong to a pace.
     if (charBefore === "/" || charBefore === ":") continue;
+    // Skip forward/backward references to other days' workouts.
+    const context = desc.slice(Math.max(0, m.index - 24), m.index).toLowerCase();
+    if (/tomorrow|yesterday|next week|last week/.test(context)) continue;
     return parseFloat(m[1]);
   }
   return 0;
@@ -67,10 +74,31 @@ export function buildPlanDays() {
         day: wo.day,
         type: wo.type,
         desc: wo.desc,
-        targetMiles: parseTargetMiles(wo.desc),
+        targetMiles: parseTargetMiles(wo.desc, wo.type),
         isStrength: isStrengthDay(wo),
       });
     }
   }
   return days;
+}
+
+/**
+ * Verify each week's stated total equals the sum of its daily targets.
+ * Returns a list of mismatches (empty when the plan is internally consistent).
+ * Called by the ICS and sync scripts so drift surfaces in CI instead of silently.
+ */
+export function checkPlanTotals() {
+  const days = buildPlanDays();
+  const problems = [];
+  for (const week of WEEKS) {
+    const sum = days
+      .filter((d) => d.week === week.n)
+      .reduce((s, d) => s + d.targetMiles, 0);
+    if (Math.abs(sum - week.miles) > 0.01) {
+      problems.push(
+        `Week ${week.n}: stated ${week.miles}mi but daily targets sum to ${sum}mi`
+      );
+    }
+  }
+  return problems;
 }
