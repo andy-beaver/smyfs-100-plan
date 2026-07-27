@@ -150,7 +150,7 @@ export const WEEKS = [
       { day: "Wed", type: "gym", desc: "10mi easy + gym light" },
       { day: "Thu", type: "mid", desc: "11mi moderate" },
       { day: "Fri", type: "rest", desc: "Rest — save your legs for tomorrow night's long run" },
-      { day: "Sat", type: "long", desc: "30mi — start 9–10pm, Sara on mobile aid, full race kit" },
+      { day: "Sat", type: "long", desc: "30mi — start 9–10pm, crew on aid, full race kit incl. reflective vest" },
       { day: "Sun", type: "easy", desc: "4mi very easy shakeout" },
     ],
     note: "Capped at 30mi (not 32) to protect the knee/shin. Night start matters — SMYFS runs into the dark and you already run strong at night. Test headlamp, layers, and your exact race-day food here."
@@ -181,7 +181,7 @@ export const WEEKS = [
       { day: "Sat", type: "long", desc: "16mi easy — may feel sluggish, that's normal" },
       { day: "Sun", type: "rest", desc: "Rest or short walk" },
     ],
-    note: "Taper madness hits here — you'll feel out of shape and want to add miles. Don't. Your fitness is banked. Start prepping drop bags and your aid-station plan with Sara."
+    note: "Taper madness hits here — you'll feel out of shape and want to add miles. Don't. Your fitness is banked. Start prepping drop bags and briefing your crew on the aid-station plan."
   },
   {
     n: 13, dates: "Oct 5 – Oct 11", phase: "taper", miles: 28, longRun: "12mi",
@@ -217,10 +217,10 @@ export const WEEKS = [
     workouts: [
       { day: "Mon", type: "rest", desc: "Rest — keep doing knee/shin mobility" },
       { day: "Tue", type: "easy", desc: "2mi easy walk/jog" },
-      { day: "Wed", type: "rest", desc: "Rest — pack bags, finalize crew plan with Sara" },
-      { day: "Thu", type: "rest", desc: "Drive to Wathena. Check in. Eat well. Sleep early." },
-      { day: "Fri", type: "rest", desc: "Rest. Nap midday. Lay out gear. Eat. Sleep early." },
-      { day: "Sat", type: "long", desc: "🔴 SMYFS 100 Mile — RACE DAY (Oct 24)" },
+      { day: "Wed", type: "rest", desc: "Rest — label 4 drop bags, confirm crew roles and the 3 legal crew points" },
+      { day: "Thu", type: "rest", desc: "Drive to St. Joseph. Rest. Confirm drop bags are labeled and packed." },
+      { day: "Fri", type: "rest", desc: "Packet pickup at Tubes Bike Shop 3–8pm (bring pet food for pacer bibs). Drop bags in. Nap. Sleep by 8pm." },
+      { day: "Sat", type: "long", desc: "🔴 RACE DAY — 6:00am start, four 25mi laps (Oct 24)" },
       { day: "Sun", type: "rest", desc: "Recovery — walk only if you feel like moving. Eat. Celebrate." },
     ],
     note: "Confirm the exact start time with the RD and set Friday's sleep accordingly. Keep your ankle band + calf mobility going even race week — it's kept you healthy this whole block."

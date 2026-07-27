@@ -1,8 +1,8 @@
 # SMYFS 100 · Training Plan
 
-An interactive 15-week training plan for the **Show Me Your Free State 100 Mile Ultramarathon** (Wathena, KS · Oct 24, 2026). Built with Vite + React and deployed to GitHub Pages.
+An interactive 15-week training plan for the **Show Me Your Free State 100 Mile Ultramarathon** — Rosecrans Memorial Airport, St. Joseph MO, Saturday Oct 24 2026. Four 25-mile laps, 6:00am start, 30-hour cutoff. Built with Vite + React and deployed to GitHub Pages.
 
-Tabs: Overview · Week by Week · Race Strategy · Knee/Shin · Training Intel.
+Tabs: Overview · Week by Week · Race Strategy (lap splits, crew access, cutoffs, mandatory gear) · Knee/Shin · Training Intel · Compliance.
 
 ---
 

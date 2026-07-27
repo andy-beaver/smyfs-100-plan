@@ -1,12 +1,26 @@
 import { useState, useEffect } from "react";
 import { PHASES, WEEKS } from "./plan-data.js";
 
+// Four 25-mile laps. Start 6:00am Sat; sub-24 means finishing by 6:00am Sun.
+// Deliberately a positive split — banking time early on a flat course is how
+// sub-24 survives the night laps.
 const RACE_SEGMENTS = [
-  { miles: "0–25", pace: "14:30/mi", cumTime: "6:03", strategy: "Conservative — you should feel embarrassingly slow. This is the 'slowing down when I feel good' skill you've already been practicing.", type: "easy" },
-  { miles: "25–50", pace: "14:00/mi", cumTime: "11:53", strategy: "Settle into cruising gear. Eat aggressively every 45 min. First real crew stop at ~mile 50.", type: "easy" },
-  { miles: "50–70", pace: "14:30/mi", cumTime: "16:43", strategy: "Fatigue arrives. Run the flats, hike anything that pitches up. Keep eating. Night sets in — your strength.", type: "moderate" },
-  { miles: "70–85", pace: "15:30/mi", cumTime: "20:31", strategy: "The dark patch, literally and mentally. Shrink your world to the next aid station. Watch form to protect the shin.", type: "hard" },
-  { miles: "85–100", pace: "14:30/mi", cumTime: "23:54", strategy: "If you paced right, you have gas left. Run it in. Sub-24 is yours.", type: "finish" },
+  { miles: "Lap 1 · 0–25", pace: "12:48/mi", cumTime: "5:20", clock: "finish ~11:20am", strategy: "Daylight, fresh legs, warmest part of the day. Feels absurdly easy — keep it there. Bank time now without burning matches.", type: "easy" },
+  { miles: "Lap 2 · 25–50", pace: "13:48/mi", cumTime: "11:05", clock: "finish ~5:05pm", strategy: "Settle into cruising gear. Pacer may join from here on. Pick up headlamp + reflective vest at the mile-50 drop bag before sunset (6:27pm).", type: "easy" },
+  { miles: "Lap 3 · 50–75", pace: "15:00/mi", cumTime: "17:20", clock: "finish ~11:20pm", strategy: "Full darkness. Hot soup and coffee are on at the manned stations. Run flats, hike nothing steep because there isn't any. Keep eating.", type: "moderate" },
+  { miles: "Lap 4 · 75–100", pace: "15:36/mi", cumTime: "23:50", clock: "finish ~5:50am", strategy: "The hard one — deep night into pre-dawn. 98.7% moon helps. Shrink your world to the next aid station. Sunrise is 7:39am, so you finish before it.", type: "hard" },
+];
+
+const AID_STATIONS = [
+  { mile: "0 / 25", name: "Start–Finish", crew: true, drop: true, note: "Crew access. Drop bag. Full reset point between laps." },
+  { mile: "6.5", name: "Children of the Corn", crew: false, drop: true, note: "No crew, no pacer pickup. Closes 7:30am Sun." },
+  { mile: "13", name: "Wathena", crew: true, drop: true, note: "Crew access. Hwy-36 crossing, manned. Closes 9:00am Sun." },
+  { mile: "19", name: "Roseport Landing", crew: true, drop: true, note: "Crew access. Closes 10:30am Sun." },
+];
+
+const CUTOFFS = [
+  { what: "Lap 3 complete (mile 75)", when: "4:00am Sun", note: "Hard cutoff — pulled from course if missed. Your plan reaches it ~11:20pm, a 4.5hr buffer." },
+  { what: "Finish (mile 100)", when: "12:00pm Sun", note: "30 hours total. Your finish goal has ~6hr of margin; sub-24 has ~6hr more." },
 ];
 
 const typeColors = {
@@ -313,7 +327,7 @@ export default function TrainingPlan() {
       }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <div style={{ fontSize: 10, letterSpacing: 4, color: "#F59E0B", marginBottom: 6, textTransform: "uppercase" }}>
-            Show Me Your Free State Ultramarathon · Wathena, KS · Oct 24, 2026
+            Show Me Your Free State 100 · Rosecrans Airport, St. Joseph MO · Oct 24, 2026
           </div>
           <h1 style={{ margin: 0, fontSize: 26, fontWeight: 700, fontFamily: "system-ui, sans-serif", letterSpacing: -0.5, color: "#F8FAFC" }}>
             100 Mile Training Plan
@@ -428,8 +442,8 @@ export default function TrainingPlan() {
                     {p.id === "reintro" && "Weeks 1–2 hold near your current ~28mi/wk while the left knee and shin settle. All easy, rehab stays daily. We only ramp once two clean weeks confirm the tissue is ready — this gate protects the whole block."}
                     {p.id === "build" && "Progressive mileage with the first back-to-back weekend in Week 6. Gentle, flat, short tempo introduced to address your threshold gap without provoking the knee. Cutback in Week 5. Race nutrition practiced every long run."}
                     {p.id === "peak" && "Highest stress of the plan. Week 10 is the peak: a 30-mile night long run (capped from 32 to protect the shin). B2B weekends up to 40 miles. Cutback in Week 8, plus a midpoint knee/shin gut-check that can adjust the goal if needed."}
-                    {p.id === "taper" && "3-week taper. Mileage drops sharply, intensity holds. Expect to feel flat — that's normal. Time for drop bags, crew briefing with Sara, gear checks, and banking sleep."}
-                    {p.id === "race" && "Easy shakeouts, travel to Wathena, sleep loading, then 100 miles Saturday Oct 24. Sub-24 is a realistic stretch goal on your current engine if the knee/shin stay quiet."}
+                    {p.id === "taper" && "3-week taper. Mileage drops sharply, intensity holds. Expect to feel flat — that's normal. Time for drop bags, crew briefing, gear checks, and banking sleep."}
+                    {p.id === "race" && "Packet pickup Friday at Tubes Bike Shop (3–8pm), drop bags sorted, then a 6:00am start Saturday. Four 25-mile laps. Sub-24 means finishing by 6:00am Sunday — realistic on your current engine if the knee/shin stay quiet."}
                   </div>
                 </div>
               );
@@ -525,12 +539,16 @@ export default function TrainingPlan() {
         {activeTab === "race" && (
           <div>
             <div style={{ background: "#0D1626", border: "1px solid #1E293B", borderRadius: 8, padding: 20, marginBottom: 20 }}>
-              <div style={{ fontSize: 9, letterSpacing: 3, color: "#64748B", marginBottom: 4 }}>TARGET FINISH TIME</div>
-              <div style={{ fontSize: 40, fontWeight: 700, color: "#F59E0B", fontFamily: "system-ui" }}>23:54</div>
-              <div style={{ fontSize: 11, color: "#64748B" }}>6 minutes under goal · 14:21/mi average</div>
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#64748B", marginBottom: 4 }}>TARGET FINISH · 6:00AM START SAT</div>
+              <div style={{ fontSize: 40, fontWeight: 700, color: "#F59E0B", fontFamily: "system-ui" }}>23:50</div>
+              <div style={{ fontSize: 11, color: "#64748B" }}>~5:50am Sunday · 14:18/mi average · four 25-mile laps</div>
+              <div style={{ fontSize: 10, color: "#475569", fontFamily: "system-ui", marginTop: 8, lineHeight: 1.6 }}>
+                Official cutoff is 12:00pm Sunday (30 hours), so a finish has wide margin.
+                Sub-24 is the stretch target, not the requirement.
+              </div>
             </div>
 
-            <div style={{ fontSize: 9, letterSpacing: 3, color: "#64748B", marginBottom: 12 }}>PACING SEGMENTS</div>
+            <div style={{ fontSize: 9, letterSpacing: 3, color: "#64748B", marginBottom: 12 }}>LAP SPLITS · POSITIVE SPLIT BY DESIGN</div>
             {RACE_SEGMENTS.map((seg, i) => (
               <div key={i} style={{
                 background: "#0D1626", border: `1px solid ${segColors[seg.type]}30`,
@@ -538,10 +556,10 @@ export default function TrainingPlan() {
                 padding: "14px 16px", marginBottom: 8,
               }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-                  <span style={{ fontSize: 14, fontWeight: 700, color: segColors[seg.type] }}>Miles {seg.miles}</span>
+                  <span style={{ fontSize: 14, fontWeight: 700, color: segColors[seg.type] }}>{seg.miles}</span>
                   <div style={{ textAlign: "right" }}>
                     <div style={{ fontSize: 13, color: "#F8FAFC" }}>{seg.pace}</div>
-                    <div style={{ fontSize: 9, color: "#64748B" }}>CUMULATIVE: {seg.cumTime}</div>
+                    <div style={{ fontSize: 9, color: "#64748B" }}>ELAPSED {seg.cumTime} · {seg.clock}</div>
                   </div>
                 </div>
                 <div style={{ fontSize: 11, color: "#94A3B8", fontFamily: "system-ui", lineHeight: 1.6 }}>{seg.strategy}</div>
@@ -572,18 +590,116 @@ export default function TrainingPlan() {
             </div>
 
             <div style={{ marginTop: 16, background: "#1A0A00", border: "1px solid #F59E0B30", borderRadius: 8, padding: 20 }}>
-              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", marginBottom: 12 }}>SARA'S CREW STATIONS (SUGGESTED)</div>
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", marginBottom: 6 }}>CREW ACCESS — ONLY THREE POINTS</div>
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", lineHeight: 1.7, marginBottom: 12 }}>
+                Crews may meet you <strong>only</strong> at Start–Finish, Wathena (mile 13), and
+                Roseport Landing (mile 19). No support anywhere else on course — no stashing food,
+                drink, or clothing. Crew vehicles on <em>any</em> unpaved portion of the course means
+                immediate disqualification, no exceptions. Brief every crew member on this before
+                race day; you are held accountable for their conduct.
+              </div>
               {[
-                ["Mile ~25", "First crew access. Hot broth/ramen, sock check, 90-second stop max."],
-                ["Mile ~50", "Halfway — the most important stop. Shoe swap if needed, real food, 5 min OK."],
-                ["Mile ~70", "Night hours. Fresh headlamp, warm layers. Give Sara a ±2hr time window."],
-                ["Mile ~85", "Final push. Last food/drink top-off. Under 3hr to go if on pace."],
-              ].map(([loc, note]) => (
-                <div key={loc} style={{ marginBottom: 10 }}>
-                  <span style={{ fontSize: 11, color: "#F59E0B" }}>{loc}</span>
-                  <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", marginTop: 2 }}>{note}</div>
+                ["Lap 1", "6:00am start", "Wathena 13 · Roseport 19 · Finish lap at 25 (~11:20am)"],
+                ["Lap 2", "~11:20am", "Wathena 38 · Roseport 44 · Lap done at 50 (~5:05pm) — grab lights here"],
+                ["Lap 3", "~5:05pm", "Wathena 63 · Roseport 69 · Lap done at 75 (~11:20pm) — hot food on"],
+                ["Lap 4", "~11:20pm", "Wathena 88 · Roseport 94 · Finish 100 (~5:50am)"],
+              ].map(([lap, t, pts]) => (
+                <div key={lap} style={{ marginBottom: 10 }}>
+                  <span style={{ fontSize: 11, color: "#F59E0B" }}>{lap}</span>
+                  <span style={{ fontSize: 10, color: "#475569", marginLeft: 8 }}>{t}</span>
+                  <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", marginTop: 2 }}>{pts}</div>
                 </div>
               ))}
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", marginTop: 6, lineHeight: 1.6 }}>
+                That's 12 crew contacts across the race — far more than most 100s. Your crew can
+                drive between Wathena and Roseport on paved roads and see you roughly every 6 miles
+                of running. Give them a ±30min window early and ±2hr by lap 4.
+              </div>
+
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", margin: "18px 0 10px" }}>PACER RULES (READ CAREFULLY)</div>
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", lineHeight: 1.7 }}>
+                • <strong>One pacer at a time</strong> — you may rotate people and pass the bib, but only one on course with you.<br />
+                • Allowed <strong>only after you complete lap 1</strong> (mile 25).<br />
+                • May join at any manned aid station <em>except</em> Children of the Corn (mile 6.5).<br />
+                • Pacer bibs come from packet pickup Friday at Tubes, in exchange for a bag of pet food.<br />
+                • <strong>No muling</strong> — pacers cannot carry your supplies or give physical assistance.<br />
+                • Pacer rule violations get <em>you</em> disqualified. Brief them properly.<br />
+                • Practical plan: fresh pacer at 50, another at 75. That covers the whole night.
+              </div>
+
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", margin: "18px 0 10px" }}>CREW ROLES</div>
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", lineHeight: 1.7, marginBottom: 10 }}>
+                With more than one person, assign roles before race day. Crews get slower, not
+                faster, when everyone tries to help at once — one person owns each job, one person
+                is in charge.
+              </div>
+              {[
+                ["Crew chief", "Owns the plan and the clock. Tracks your lap splits against the 4:00am mile-75 cutoff. The only person who overrules the plan."],
+                ["Nutrition", "Next bottle mixed and food ready before you arrive. Tracks what you've actually eaten — by lap 3 you won't remember."],
+                ["Gear", "Shoes, socks, lights, batteries, layers. Owns the sunset handoff at ~mile 50 and the four drop bags."],
+                ["Pacer(s)", "One at a time, post-lap-1. Rotate at 50 and 75 so each gets fresh legs into the night."],
+                ["Driver / logistics", "Gets the crew to Wathena and Roseport early, on paved roads only. Never the same person as the crew chief."],
+              ].map(([role, note]) => (
+                <div key={role} style={{ marginBottom: 10 }}>
+                  <span style={{ fontSize: 11, color: "#F8FAFC", fontWeight: 600, fontFamily: "system-ui" }}>{role}</span>
+                  <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", marginTop: 2, lineHeight: 1.6 }}>{note}</div>
+                </div>
+              ))}
+
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#EF4444", margin: "18px 0 10px" }}>MANDATORY GEAR — DQ IF MISSING</div>
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", lineHeight: 1.8 }}>
+                • <strong>Personal hydration at all times</strong> — handheld, belt, vest, or bladder. Unmanned stations have no cups.<br />
+                • <strong>Headlamp</strong> any time before sunrise or after sunset (sunset 6:27pm, sunrise 7:39am Sun).<br />
+                • <strong>Reflective belt or vest, ANSI Class-1, 155+ sq in</strong>, required after sunset. The handbook is explicit that failure to comply means disqualification.<br />
+                • Bib visible on front of torso or thigh at all times.<br />
+                • 50/100-mile runners must <strong>check in with a race official at every manned aid station after lap 1</strong>.
+              </div>
+
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", margin: "18px 0 10px" }}>DROP BAG PLAN (4 MAX, TSA CARRY-ON SIZE)</div>
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", lineHeight: 1.7 }}>
+                Label each with last name, bib number, and station in large block letters. Drop at
+                Tubes Friday night, or at Start–Finish by 5:00am Saturday.
+              </div>
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", lineHeight: 1.8, marginTop: 8 }}>
+                • <strong>Start–Finish</strong> — the big one. Hit it 4× (miles 0/25/50/75). Lights, vest, dry shoes, spare socks, warm layer, backup nutrition.<br />
+                • <strong>Wathena (13)</strong> — hit 4× at miles 13/38/63/88. Socks, lube, nutrition top-up.<br />
+                • <strong>Roseport (19)</strong> — hit 4× at miles 19/44/69/94. Same idea, lighter.<br />
+                • <strong>Children of the Corn (6.5)</strong> — no crew here, so this bag matters more. Hit at 6.5/31.5/56.5/81.5.
+              </div>
+
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#EF4444", margin: "18px 0 10px" }}>CUTOFFS</div>
+              {CUTOFFS.map((c) => (
+                <div key={c.what} style={{ marginBottom: 10 }}>
+                  <span style={{ fontSize: 11, color: "#F8FAFC", fontFamily: "system-ui", fontWeight: 600 }}>{c.what}</span>
+                  <span style={{ fontSize: 11, color: "#EF4444", marginLeft: 10 }}>{c.when}</span>
+                  <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", marginTop: 2, lineHeight: 1.6 }}>{c.note}</div>
+                </div>
+              ))}
+
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", margin: "18px 0 10px" }}>AID STATIONS PER LAP</div>
+              {AID_STATIONS.map((a) => (
+                <div key={a.name} style={{ marginBottom: 8 }}>
+                  <span style={{ fontSize: 11, color: "#F59E0B" }}>Mile {a.mile}</span>
+                  <span style={{ fontSize: 11, color: "#F8FAFC", marginLeft: 8, fontFamily: "system-ui" }}>{a.name}</span>
+                  {a.crew && <span style={{ fontSize: 8, color: "#10B981", marginLeft: 8, letterSpacing: 1 }}>CREW OK</span>}
+                  <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", marginTop: 2 }}>{a.note}</div>
+                </div>
+              ))}
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", marginTop: 8, lineHeight: 1.6 }}>
+                Unmanned water/snack stops sit roughly halfway between each manned station. Manned
+                stations turn on hot coffee, soup, and hot food from late afternoon onward — plan to
+                use them from lap 3.
+              </div>
+
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", margin: "18px 0 10px" }}>BRIEF THE WHOLE CREW ON</div>
+              <div style={{ fontSize: 10, color: "#94A3B8", fontFamily: "system-ui", lineHeight: 1.8 }}>
+                • The three legal crew points, and that vehicles on unpaved roads = your DQ.<br />
+                • Your lap splits with a ±30min window early, ±2hr by lap 4.<br />
+                • What "bad" looks like for you, and that a low point on lap 4 is normal, not an emergency.<br />
+                • Signs that are <em>not</em> normal: confusion, no urine output, chest pain, uncontrolled vomiting. Agree in advance the crew chief has that call.<br />
+                • Rotate their rest. A crew awake 24 hours makes bad decisions too.<br />
+                • Lap-based course means you pass the start-finish 4×, so a car there is a warm base for off-duty crew.
+              </div>
             </div>
           </div>
         )}
@@ -635,7 +751,7 @@ export default function TrainingPlan() {
               {[
                 ["Cadence", "Your runs sit around 76–80 spm at cadence — good. Keeping quick, light steps reduces impact per stride. On tired long runs, don't let it drop below ~72."],
                 ["Surface", "Favor soft surfaces (trail, dirt, the levee grass) for easy and tired-legs runs. Your Dirt Church and trail runs are ideal. Save pavement for shorter efforts."],
-                ["Downhills", "Steep descents are the biggest patellofemoral and shin aggravator. On tempo/long days, pick flat or gently rolling routes — which also matches flat Wathena."],
+                ["Downhills", "Steep descents are the biggest patellofemoral and shin aggravator. The course is genuinely flat — 138ft of gain per 25-mile lap — so flat training routes are both knee-friendly and race-specific."],
                 ["Run/walk early", "Building a run/walk rhythm into training (not just the race) reduces cumulative knee load and is exactly how you'll run the 100 anyway."],
               ].map(([k, v]) => (
                 <div key={k} style={{ marginBottom: 10, paddingBottom: 10, borderBottom: "1px solid #1E293B" }}>
@@ -672,7 +788,7 @@ export default function TrainingPlan() {
               {
                 title: "Night Running: A Real Advantage",
                 color: "#A78BFA",
-                body: "Your Strava is full of night runs and you've nailed midnight long efforts. SMYFS runs into the dark, so this is a genuine edge. The Week 10 peak long run is scheduled as a 9–10pm 30-miler specifically to rehearse racing through the night with Sara crewing.",
+                body: "Your Strava is full of night runs and you've nailed midnight long efforts. SMYFS runs into the dark, so this is a genuine edge. The Week 10 peak long run is scheduled as a 9–10pm 30-miler specifically to rehearse racing through the night with your crew running mobile aid.",
               },
               {
                 title: "Strength: Reduce Volume, Keep Frequency",
@@ -682,12 +798,12 @@ export default function TrainingPlan() {
               {
                 title: "Flat Course = Your Weekends Are Harder",
                 color: "#EF4444",
-                body: "Wathena's river/levee terrain is flat, so the cumulative fatigue of your B2B weekends (up to 40mi) is actually tougher than the race's elevation will be. That's good news: train the fatigue, and race day's terrain works in your favor. It also means favoring flat training routes protects the knee AND is race-specific.",
+                body: "The handbook confirms it: 138 feet of gain per 25-mile lap, roughly 550ft over 100 miles. Ten miles per lap is quiet pavement, the rest is maintained gravel and crushed-limestone levee path, plus one dirt mile through a cornfield that turns muddy if it rains. Your B2B weekends generate more cumulative fatigue than this terrain will. Flat training protects the knee AND is race-specific.",
               },
               {
                 title: "Shoe Rotation: Pick the Race Pair Early",
                 color: "#10B981",
-                body: "You rotate several pairs (gear IDs 31591713, 25031003, 29152691, plus others). For race day choose the pair with 100–200mi on it — broken in, not worn out — and log a couple of long runs in it during taper. For flat Wathena, a cushioned road/hybrid ultra shoe likely beats an aggressive trail shoe.",
+                body: "The handbook says road or trail shoes both work. Given ~10 paved miles per lap and the rest gravel/limestone, a cushioned road or light hybrid shoe beats an aggressive trail shoe. Pick the pair with 100–200mi on it and log a taper long run in it. Stage a second dry pair in your mile-50 drop bag — four laps means four chances for wet feet, especially if the cornfield mile is muddy.",
               },
             ].map(item => (
               <div key={item.title} style={{
