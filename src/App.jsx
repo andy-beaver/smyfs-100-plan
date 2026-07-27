@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PHASES, WEEKS } from "./plan-data.js";
 
 const RACE_SEGMENTS = [
@@ -69,6 +69,231 @@ function SubscribeBanner() {
   );
 }
 
+const STATUS_STYLE = {
+  done:      { color: "#10B981", icon: "✓",  label: "Done" },
+  partial:   { color: "#F59E0B", icon: "◐",  label: "Partial" },
+  missed:    { color: "#EF4444", icon: "✕",  label: "Missed" },
+  rest:      { color: "#475569", icon: "–",  label: "Rest" },
+  untracked: { color: "#64748B", icon: "?",  label: "Not tracked" },
+  upcoming:  { color: "#334155", icon: "·",  label: "Upcoming" },
+};
+
+function ComplianceTab() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [openWeek, setOpenWeek] = useState(null);
+
+  useEffect(() => {
+    // Fetched at runtime so a fresh sync shows up without rebuilding the bundle.
+    const base = window.location.href.replace(/index\.html$/, "").replace(/[^/]*$/, "");
+    let cancelled = false;
+    fetch(base + "compliance.json", { cache: "no-store" })
+      .then((r) => {
+        if (!r.ok) throw new Error(`No compliance data yet (${r.status})`);
+        return r.json();
+      })
+      .then((d) => { if (!cancelled) setData(d); })
+      .catch((e) => { if (!cancelled) setError(e.message); });
+    return () => { cancelled = true; };
+  }, []);
+
+  if (error) {
+    return (
+      <div style={{
+        background: "#0D1626", border: "1px solid #1E293B",
+        borderRadius: 8, padding: 24, textAlign: "center",
+      }}>
+        <div style={{ fontSize: 13, color: "#94A3B8", fontFamily: "system-ui", marginBottom: 8 }}>
+          No sync data yet
+        </div>
+        <div style={{ fontSize: 11, color: "#475569", fontFamily: "system-ui", lineHeight: 1.7 }}>
+          Once the Strava sync workflow runs, completed runs will appear here alongside
+          the plan. See the README for setup.
+        </div>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return <div style={{ fontSize: 11, color: "#475569", fontFamily: "system-ui" }}>Loading…</div>;
+  }
+
+  const t = data.totals;
+  const pct = t.compliancePct;
+  const pctColor = pct == null ? "#64748B" : pct >= 90 ? "#10B981" : pct >= 75 ? "#F59E0B" : "#EF4444";
+
+  return (
+    <div>
+      {/* Headline numbers */}
+      <div style={{
+        background: "#0D1626", border: "1px solid #1E293B",
+        borderRadius: 8, padding: 20, marginBottom: 16,
+      }}>
+        <div style={{ fontSize: 9, letterSpacing: 3, color: "#64748B", marginBottom: 4 }}>
+          PLAN COMPLIANCE · {t.weeksElapsed} WEEKS ELAPSED
+        </div>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
+          <div style={{ fontSize: 40, fontWeight: 700, color: pctColor, fontFamily: "system-ui" }}>
+            {pct == null ? "–" : pct + "%"}
+          </div>
+          <div style={{ fontSize: 12, color: "#64748B" }}>
+            {t.actualToDate} of {t.plannedToDate} planned miles
+          </div>
+        </div>
+
+        <div style={{ display: "flex", gap: 20, marginTop: 14, flexWrap: "wrap" }}>
+          {[
+            ["DONE", t.daysDone, "#10B981"],
+            ["PARTIAL", t.daysPartial, "#F59E0B"],
+            ["MISSED", t.daysMissed, "#EF4444"],
+            ["RUNS LOGGED", t.runsCompleted, "#3B82F6"],
+            ["WEEKS LEFT", t.weeksRemaining, "#A78BFA"],
+          ].map(([k, v, c]) => (
+            <div key={k}>
+              <div style={{ fontSize: 9, color: "#64748B", letterSpacing: 2 }}>{k}</div>
+              <div style={{ fontSize: 16, color: c, fontWeight: 700 }}>{v}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ fontSize: 9, color: "#334155", fontFamily: "system-ui", marginTop: 14 }}>
+          Synced {new Date(data.generatedAt).toLocaleString()} from{" "}
+          {data.source === "mock" ? "sample data" : "Strava"}
+        </div>
+      </div>
+
+      {/* Planned vs actual, per week */}
+      <div style={{
+        background: "#0D1626", border: "1px solid #1E293B",
+        borderRadius: 8, padding: "20px 16px", marginBottom: 16,
+      }}>
+        <div style={{ fontSize: 9, letterSpacing: 3, color: "#64748B", marginBottom: 16 }}>
+          PLANNED VS ACTUAL
+        </div>
+        <div style={{ display: "flex", alignItems: "flex-end", gap: 4, height: 90 }}>
+          {data.weeks.map((w) => {
+            const max = Math.max(...data.weeks.map((x) => Math.max(x.plannedMiles, x.actualMiles)));
+            return (
+              <div key={w.n} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <div style={{ display: "flex", gap: 1, alignItems: "flex-end", width: "100%", height: 80 }}>
+                  <div title={`Planned ${w.plannedMiles}mi`} style={{
+                    flex: 1, height: (w.plannedMiles / max) * 78,
+                    background: "#334155", borderRadius: "2px 2px 0 0",
+                  }} />
+                  <div title={`Actual ${w.actualMiles}mi`} style={{
+                    flex: 1, height: (w.actualMiles / max) * 78,
+                    background: w.started ? "#10B981" : "transparent",
+                    borderRadius: "2px 2px 0 0",
+                  }} />
+                </div>
+                <div style={{ fontSize: 7, color: "#475569", marginTop: 4 }}>{w.n}</div>
+              </div>
+            );
+          })}
+        </div>
+        <div style={{ display: "flex", gap: 14, marginTop: 12 }}>
+          <span style={{ fontSize: 9, color: "#64748B" }}>▪ Planned</span>
+          <span style={{ fontSize: 9, color: "#10B981" }}>▪ Actual</span>
+        </div>
+      </div>
+
+      {/* Week detail */}
+      <div style={{ fontSize: 9, letterSpacing: 3, color: "#64748B", marginBottom: 12 }}>
+        WEEK DETAIL
+      </div>
+      {data.weeks.filter((w) => w.started).reverse().map((w) => {
+        const c = w.compliance;
+        const col = c == null ? "#64748B" : c >= 90 ? "#10B981" : c >= 75 ? "#F59E0B" : "#EF4444";
+        const open = openWeek === w.n;
+        return (
+          <div key={w.n} style={{
+            background: "#0D1626", border: "1px solid #1E293B",
+            borderLeft: `3px solid ${col}`, borderRadius: 6, marginBottom: 8, overflow: "hidden",
+          }}>
+            <div onClick={() => setOpenWeek(open ? null : w.n)} style={{
+              padding: "12px 14px", cursor: "pointer", display: "flex",
+              justifyContent: "space-between", alignItems: "center",
+            }}>
+              <div>
+                <span style={{ fontSize: 12, fontWeight: 700, color: "#F8FAFC", fontFamily: "system-ui" }}>
+                  Week {w.n}
+                </span>
+                <span style={{ fontSize: 10, color: "#475569", marginLeft: 10 }}>{w.dates}</span>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+                <span style={{ fontSize: 10, color: "#64748B" }}>
+                  {w.actualMiles} / {w.plannedMiles} mi
+                </span>
+                <span style={{ fontSize: 15, fontWeight: 700, color: col }}>
+                  {c == null ? "–" : c + "%"}
+                </span>
+              </div>
+            </div>
+
+            {open && (
+              <div style={{ padding: "0 14px 14px" }}>
+                {w.days.map((d) => {
+                  const s = STATUS_STYLE[d.status] ?? STATUS_STYLE.upcoming;
+                  return (
+                    <div key={d.date} style={{
+                      display: "flex", gap: 10, alignItems: "flex-start",
+                      padding: "8px 10px", background: "#080D18",
+                      border: "1px solid #1E293B", borderRadius: 4, marginBottom: 5,
+                    }}>
+                      <span style={{ color: s.color, fontSize: 12, width: 14 }}>{s.icon}</span>
+                      <div style={{ width: 30, fontSize: 9, color: "#64748B" }}>{d.day}</div>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontSize: 10, color: "#CBD5E1", fontFamily: "system-ui" }}>
+                          {d.desc}
+                        </div>
+                        {d.actualMiles > 0 && (
+                          <div style={{ fontSize: 9, color: s.color, marginTop: 3 }}>
+                            {d.actualMiles} mi{d.pace ? ` · ${d.pace}` : ""}
+                            {d.targetMiles > 0 && ` · target ${d.targetMiles} mi`}
+                          </div>
+                        )}
+                        {d.activities?.length > 0 && (
+                          <div style={{ marginTop: 4 }}>
+                            {d.activities.map((a, i) => (
+                              <a key={i} href={a.url} target="_blank" rel="noreferrer" style={{
+                                fontSize: 9, color: "#3B82F6", textDecoration: "none",
+                                fontFamily: "system-ui", display: "block",
+                              }}>
+                                ↗ {a.name}{a.avgHr ? ` · ${a.avgHr} bpm` : ""}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        );
+      })}
+
+      <div style={{
+        marginTop: 14, background: "#0A0F1E", border: "1px solid #1E293B",
+        borderRadius: 6, padding: 14,
+      }}>
+        <div style={{ fontSize: 9, letterSpacing: 2, color: "#64748B", marginBottom: 8 }}>
+          HOW TO READ THIS
+        </div>
+        <div style={{ fontSize: 10, color: "#64748B", fontFamily: "system-ui", lineHeight: 1.7 }}>
+          Weekly total is the number that matters — a run shifted from Tuesday to Wednesday
+          still counts toward the week. A day is <span style={{ color: "#10B981" }}>done</span> at
+          85% of target, <span style={{ color: "#F59E0B" }}>partial</span> above 50%. Gym days show
+          as <span style={{ color: "#64748B" }}>not tracked</span> unless a strength activity reaches
+          Strava, since lifting is logged in Hevy. Chasing 100% every week is not the goal;
+          consistency across a phase is.
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function TrainingPlan() {
   const [activeTab, setActiveTab] = useState("overview");
   const [selectedWeek, setSelectedWeek] = useState(null);
@@ -94,7 +319,7 @@ export default function TrainingPlan() {
             100 Mile Training Plan
           </h1>
           <div style={{ fontSize: 10, color: "#64748B", marginTop: 4, fontFamily: "system-ui" }}>
-            15 weeks · starts today, Sat Jul 11, 2026 · built around your left knee & shin recovery
+            15 weeks · Mon Jul 13 – Sat Oct 24, 2026 · weeks run Mon–Sun to match Strava
           </div>
           <div style={{ marginTop: 12, display: "flex", gap: 20, flexWrap: "wrap" }}>
             {[
@@ -123,6 +348,7 @@ export default function TrainingPlan() {
             ["race", "RACE STRATEGY"],
             ["rehab", "KNEE / SHIN"],
             ["intel", "TRAINING INTEL"],
+            ["compliance", "COMPLIANCE"],
           ].map(([id, label]) => (
             <button key={id} onClick={() => setActiveTab(id)}
               style={{
@@ -175,7 +401,7 @@ export default function TrainingPlan() {
                 })}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>
-                <span style={{ fontSize: 8, color: "#475569" }}>JUL 12</span>
+                <span style={{ fontSize: 8, color: "#475569" }}>JUL 13</span>
                 <span style={{ fontSize: 8, color: "#475569" }}>OCT 24</span>
               </div>
             </div>
@@ -202,7 +428,7 @@ export default function TrainingPlan() {
                     {p.id === "reintro" && "Weeks 1–2 hold near your current ~28mi/wk while the left knee and shin settle. All easy, rehab stays daily. We only ramp once two clean weeks confirm the tissue is ready — this gate protects the whole block."}
                     {p.id === "build" && "Progressive mileage with the first back-to-back weekend in Week 6. Gentle, flat, short tempo introduced to address your threshold gap without provoking the knee. Cutback in Week 5. Race nutrition practiced every long run."}
                     {p.id === "peak" && "Highest stress of the plan. Week 10 is the peak: a 30-mile night long run (capped from 32 to protect the shin). B2B weekends up to 40 miles. Cutback in Week 8, plus a midpoint knee/shin gut-check that can adjust the goal if needed."}
-                    {p.id === "taper" && "3-week taper. Mileage drops sharply, intensity holds. Expect to feel flat — that's normal. Time for drop bags, crew briefing with crew, gear checks, and banking sleep."}
+                    {p.id === "taper" && "3-week taper. Mileage drops sharply, intensity holds. Expect to feel flat — that's normal. Time for drop bags, crew briefing with Sara, gear checks, and banking sleep."}
                     {p.id === "race" && "Easy shakeouts, travel to Wathena, sleep loading, then 100 miles Saturday Oct 24. Sub-24 is a realistic stretch goal on your current engine if the knee/shin stay quiet."}
                   </div>
                 </div>
@@ -346,11 +572,11 @@ export default function TrainingPlan() {
             </div>
 
             <div style={{ marginTop: 16, background: "#1A0A00", border: "1px solid #F59E0B30", borderRadius: 8, padding: 20 }}>
-              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", marginBottom: 12 }}>CREW STATIONS (SUGGESTED)</div>
+              <div style={{ fontSize: 9, letterSpacing: 3, color: "#F59E0B", marginBottom: 12 }}>SARA'S CREW STATIONS (SUGGESTED)</div>
               {[
                 ["Mile ~25", "First crew access. Hot broth/ramen, sock check, 90-second stop max."],
                 ["Mile ~50", "Halfway — the most important stop. Shoe swap if needed, real food, 5 min OK."],
-                ["Mile ~70", "Night hours. Fresh headlamp, warm layers. Give Crew a ±2hr time window."],
+                ["Mile ~70", "Night hours. Fresh headlamp, warm layers. Give Sara a ±2hr time window."],
                 ["Mile ~85", "Final push. Last food/drink top-off. Under 3hr to go if on pace."],
               ].map(([loc, note]) => (
                 <div key={loc} style={{ marginBottom: 10 }}>
@@ -446,7 +672,7 @@ export default function TrainingPlan() {
               {
                 title: "Night Running: A Real Advantage",
                 color: "#A78BFA",
-                body: "Your Strava is full of night runs and you've nailed midnight long efforts. SMYFS runs into the dark, so this is a genuine edge. The Week 10 peak long run is scheduled as a 9–10pm 30-miler specifically to rehearse racing through the night with crew crewing.",
+                body: "Your Strava is full of night runs and you've nailed midnight long efforts. SMYFS runs into the dark, so this is a genuine edge. The Week 10 peak long run is scheduled as a 9–10pm 30-miler specifically to rehearse racing through the night with Sara crewing.",
               },
               {
                 title: "Strength: Reduce Volume, Keep Frequency",
@@ -492,6 +718,8 @@ export default function TrainingPlan() {
             </div>
           </div>
         )}
+
+        {activeTab === "compliance" && <ComplianceTab />}
       </div>
 
       <div style={{ textAlign: "center", padding: 20, fontSize: 9, color: "#1E293B", letterSpacing: 2 }}>

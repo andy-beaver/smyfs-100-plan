@@ -93,3 +93,96 @@ The site publishes a subscribable calendar at `/smyfs-100-plan.ics` containing a
 **Google Calendar:** Settings → Add calendar → From URL → paste the `.ics` URL.
 
 **Note:** subscribers can't edit events (it's read-only by design), and unsubscribing removes everything cleanly — no calendar clutter.
+
+---
+
+## 📊 Strava compliance sync
+
+The site can show planned vs. actual training in a **Compliance** tab: weekly mileage
+adherence, per-day done/partial/missed marks, and links to the matching Strava activities.
+
+`scripts/sync-strava.mjs` pulls your activities, matches them against the plan, and writes
+`public/compliance.json`. It runs inside the deploy workflow — on every push and nightly at
+09:00 UTC — so the published site refreshes itself without you doing anything.
+
+### One-time setup
+
+**1. Create a Strava API application**
+
+Go to <https://www.strava.com/settings/api> and create an app. Any name works. Set
+**Authorization Callback Domain** to `localhost`. Note your **Client ID** and **Client Secret**.
+
+**2. Authorize your own account and get a refresh token**
+
+Open this URL in a browser, substituting your client ID:
+
+```
+https://www.strava.com/oauth/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read_all
+```
+
+Click Authorize. The browser lands on a `localhost` page that fails to load — that's expected.
+Copy the `code=...` value out of the address bar, then exchange it for tokens:
+
+```bash
+curl -X POST https://www.strava.com/oauth/token \
+  -d client_id=YOUR_CLIENT_ID \
+  -d client_secret=YOUR_CLIENT_SECRET \
+  -d code=THE_CODE_FROM_THE_URL \
+  -d grant_type=authorization_code
+```
+
+The response contains a `refresh_token`. That's the long-lived credential you need.
+
+**3. Add repository secrets**
+
+In your repo: **Settings → Secrets and variables → Actions → New repository secret**. Add:
+
+| Secret | Value |
+| --- | --- |
+| `STRAVA_CLIENT_ID` | from step 1 |
+| `STRAVA_CLIENT_SECRET` | from step 1 |
+| `STRAVA_REFRESH_TOKEN` | from step 2 |
+
+Then trigger a run: **Actions → Build and deploy to GitHub Pages → Run workflow**.
+
+### Privacy
+
+`compliance.json` is generated at build time and is **git-ignored**, so your activity data is
+never committed to the repo's history — it only exists on the deployed site.
+
+Bear in mind the deployed site is public. By default the Compliance tab lists activity names
+and links. To publish only aggregate numbers, add a repository *variable* (not secret) named
+`PRIVACY_MODE` set to `minimal` — activity names, links, and heart-rate data are then omitted.
+
+### How matching works
+
+- **Plan weeks run Monday->Sunday**, matching Strava's weekly boundaries, so weekly totals
+  here line up exactly with what Strava reports.
+- Activities are matched to plan days by **local calendar date**.
+- A day is **done** at ≥85% of its target distance, **partial** at ≥50%, **missed** below that.
+- **Weekly totals are the metric that matters** — a run shifted from Tuesday to Wednesday
+  still counts toward the week, which is how ultra training actually goes.
+- Gym days show **not tracked** rather than "missed" unless a strength activity reaches Strava,
+  since lifting is logged in Hevy.
+- Target distances are parsed from the workout text (`"20mi at goal race effort (~14:00/mi)"` →
+  20 miles, correctly ignoring the pace). See `scripts/plan-utils.mjs`.
+
+> **Note on weekly totals:** each week's stated mileage is slightly higher than the sum of its
+> itemised day targets (warm-ups and gym-day shakeouts aren't all written out). Week-level
+> compliance uses the stated total, so a "100%" week means you hit the real planned volume.
+
+### Testing without credentials
+
+```bash
+node scripts/sync-strava.mjs --mock
+npm run dev
+```
+
+This writes a `compliance.json` built from synthetic activities so you can see the tab populated
+before wiring up Strava.
+
+### Token expiry
+
+Strava occasionally rotates refresh tokens. If that happens the sync step logs a warning with the
+new token — update the `STRAVA_REFRESH_TOKEN` secret and re-run. The sync step is marked
+`continue-on-error`, so a failure here never blocks the site from deploying.

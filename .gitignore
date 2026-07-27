@@ -16,3 +16,8 @@ npm-debug.log*
 # Env
 .env
 .env.local
+
+# Generated at build time by scripts/sync-strava.mjs.
+# Kept out of git so personal activity data isn't archived in history —
+# it's regenerated on every deploy and served from the site only.
+public/compliance.json

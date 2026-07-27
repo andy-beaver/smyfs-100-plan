@@ -1,19 +1,21 @@
-name: Deploy to GitHub Pages
+name: Build and deploy to GitHub Pages
 
 on:
-  # Deploy whenever you push to the main branch
+  # Deploy whenever you push to main
   push:
     branches: [main]
-  # ...or trigger manually from the Actions tab
+  # Nightly refresh so Strava compliance data stays current
+  # 09:00 UTC ~= 4am Central, after the previous day's runs have synced
+  schedule:
+    - cron: "0 9 * * *"
+  # Run on demand from the Actions tab
   workflow_dispatch:
 
-# Permissions required for the Pages deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment; cancel in-progress runs on new pushes
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -28,11 +30,31 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 24
 
       - name: Install dependencies
-        run: npm ci
+        # npm ci is faster and reproducible, but requires a lock file.
+        # Fall back to npm install so the repo builds before one is committed.
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            echo "No package-lock.json found - using npm install."
+            npm install
+          fi
+
+      - name: Sync Strava compliance data
+        # Non-fatal: if Strava is down or secrets aren't set yet, the site
+        # still builds and simply shows "no sync data yet".
+        continue-on-error: true
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          # Set repo variable PRIVACY_MODE to "minimal" to omit activity
+          # names and Strava links from the published JSON.
+          PRIVACY_MODE: ${{ vars.PRIVACY_MODE }}
+        run: node scripts/sync-strava.mjs
 
       - name: Build
         run: npm run build

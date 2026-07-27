@@ -5,7 +5,8 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { WEEKS, PLAN_START } from "../src/plan-data.js";
 
-const DAY_OFFSET = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+// Weeks run Monday -> Sunday, matching Strava's weekly boundaries.
+const DAY_OFFSET = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
 const TYPE_EMOJI = {
   long: "🏃", b2b: "🔁", mid: "🏃", easy: "🟢", gym: "🏋️", rest: "😴",
 };
